@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_0K3KkeabEeipONB1Z5jsPQ" label="test" language="java" technicalLabel="TEST" author="_0K3KkuabEeipONB1Z5jsPQ" productVersion="Talend Cloud Data Integration-7.0.1.20180903_1027-patch" url="{&quot;location&quot;:&quot;https://github.com/mpasquiers/test&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DI" bigData="false"/>
+  <TalendProperties:User xmi:id="_0K3KkuabEeipONB1Z5jsPQ" login="mpasquiers@dmc.fr" firstName="MAXE" lastName="PASQUIERS" type="DI"/>
+</xmi:XMI>
