@@ -10,6 +10,26 @@
   <url>http://www.talend.org/</url>
   <modules>
     <module>code/routines</module>
+    <module>jobs/process/Cpal/cpalj00_0.1</module>
+    <module>jobs/process/Cpre/cpres001_0.1</module>
+    <module>jobs/process/Cpal/cpalj03_0.1</module>
+    <module>jobs/process/Cpre/cprej01_0.1</module>
+    <module>jobs/process/Cpal/cpals001_0.1</module>
+    <module>jobs/process/Cpre/cprej02_0.1</module>
+    <module>jobs/process/Cpre/cprej00_0.1</module>
+    <module>jobs/process/test_0.1</module>
+    <module>jobs/process/Cpre/cprej03_0.1</module>
+    <module>jobs/process/Cpre/cprelanceur_0.1</module>
+    <module>jobs/process/Cpal/cpallanceur_0.1</module>
+    <module>jobs/process/Cpal/cpalj01_0.1</module>
+    <module>jobs/process/oliv/olivj00_0.1</module>
+    <module>jobs/process/Cpre/cpres003_0.1</module>
+    <module>jobs/process/General/ecriturefichierlog_0.1</module>
+    <module>jobs/process/Cpal/cpalj02_0.1</module>
+    <module>jobs/process/Cpal/cpals003_0.1</module>
+    <module>jobs/process/General/controleficcpterr_0.1</module>
+    <module>jobs/process/Cpre/cpres002_0.1</module>
+    <module>jobs/process/Cpal/cpals002_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TEST</talend.project.name>
