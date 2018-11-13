@@ -669,7 +669,6 @@
     </ItemsRelations>
     <ItemsRelations xmi:id="_9XEedOcZEeiisoT47hPqSg">
       <baseItem xmi:id="_9XEedecZEeiisoT47hPqSg" id="_AYB-QGsaEeiRjp0KiKjpHA" version="0.1" type="job"/>
-      <relatedItems xmi:id="_9XEeducZEeiisoT47hPqSg" id="_e7mBwGf6Eei7nvte-9yivQ" version="Latest" type="context"/>
       <relatedItems xmi:id="_9XEed-cZEeiisoT47hPqSg" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_9XEeeOcZEeiisoT47hPqSg" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_9XEeeecZEeiisoT47hPqSg" id="TalendString" version="Latest" type="routine"/>
