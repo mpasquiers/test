@@ -120,12 +120,13 @@
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tWarn_1"/>
     </node>
+    <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    </node>
     <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputProperties_1" target="tContextLoad_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-    </connection>
-    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputProperties_1" target="TRIGGER_OUTPUT_1">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
     </connection>
     <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileExist_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileExist_1" target="tFileInputProperties_1">
       <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Boolean)globalMap.get(&quot;tFileExist_1_EXISTS&quot;))"/>
@@ -134,6 +135,9 @@
     <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileExist_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileExist_1" target="tWarn_1">
       <elementParameter field="MEMO_JAVA" name="CONDITION" value="!((Boolean)globalMap.get(&quot;tFileExist_1_EXISTS&quot;))"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
+    </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tFileExist_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
     </connection>
     <subjob>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputProperties_1"/>
@@ -155,10 +159,16 @@
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
-    <jobletNodes componentName="TRIGGER_OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="224" posY="352" trigger="true">
+    <subjob>
+      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+    </subjob>
+    <jobletNodes componentName="TRIGGER_OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="224" posY="448" trigger="true">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_OUTPUT_1"/>
       <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-      <elementParameter field="CHECK" name="START" show="false" value="false"/>
+      <elementParameter field="CHECK" name="START" show="false" value="true"/>
       <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
       <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
       <elementParameter field="CHECK" name="INFORMATION" value="false"/>
@@ -166,13 +176,13 @@
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_98f789c2-4440-4fc6-955f-b430de570427"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>a7nKch2yAvECzgm5WDdk2p5BWtjrAKs8HYDaBWJ3m3fgl5CZyJ6iozEefAYMygFXH0Xb0M3R/6sq
-NhLg4wFAHA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_70721207-49c7-4345-8aa1-8850c8840093"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZjZNGR9lva9Lpe9z+qSJycKu1OsWVhVgTq9ZuPao1Y3CgO2+Y2lmnYEaaP1mIPisCF/IEa4sB46y
-B54sAIN1og==</DigestValue></Reference></SignedInfo><SignatureValue>qkSMCZ2gHn2SP+oVNt3vNRsZ1QqLgYD2fdNOSdDZeugALxlWF/+G3QDUUD5NBWiGbmaEgqSzVxW8
-HxAieQeyowLhQ0dQYYij+Dj2x5D6vrJxJbvwCAkkEg8xtnoGoJE9Al6WISsKSrceGiuJVnhL9Qif
-e8rw8qEyBOxb/Kg/3oprbLGwvzo2WGMAuYCT8IktMv7v2h4FE7b7eUPz68eoxFE0mHI7tizeX827
-a2cCsm+lktJSI2jxKqQrGpwq3w6+3k/1BpeeI18oP9q8xriRheFHwWuvNqw8WT/Pwo2x8KxsUOHc
-MON8LeiaEmfd3bPcMDx63SAxq1+5gQyKFkcfRg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e103ddfe-f0f1-4ec1-b864-39391ae6bf4d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GOGWYKQ7J2oU6Xy7ntP9mL4I8DT/s+clxGdKOiZ+cGUeDQVqzL5aaGFyg/mkK6IImRVHlWTMfbj4
+6RucIn9LOw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ff078d24-33d2-4ee4-8745-9367756c8a30"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mjJRGNSL8KtCaEnsng0xiDvkv3AYMnQPzkp+7Luxa17E/lhZSGnd+3pMKlKgEq0wGPASJNGdNtaO
+DfkIJh7tQQ==</DigestValue></Reference></SignedInfo><SignatureValue>r358Qrtrrv8rmlBr6Bh0ZsOSKoFeCU872pSKls9RaE7KgpUed4wkE+je/n8lyb7seTlkuVn118M/
+kEL3Z8jBoS11i48jRoXVwmBcW9maRoHhwrgzIJiauvwv0REzRabpVXIvOqv1hYwGcqEEBUUh+KXx
+QV3w2B/eWyUHwQnF2H2HELHM64xEWpzMNA8AskrxPJ2iHtKe1hx5Ia9p5JXxifGtNFy1311u6mec
+axBxOuxYjudsNzL6Uru3AZ8ECrJRQhpd2shAhHUz0Tyd1Pq5MXtI9mySDifFdCbM8RlaWyUrycUV
+MS/0JePrHoUJ5bBGuYOUOsV0I32EnGh8PYM/1g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -196,4 +206,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_70721207-49c7-4345-8aa1-8850c8840093" Target="#_98f789c2-4440-4fc6-955f-b430de570427"><Timestamp>2018-11-13 10:17:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ff078d24-33d2-4ee4-8745-9367756c8a30" Target="#_e103ddfe-f0f1-4ec1-b864-39391ae6bf4d"><Timestamp>2018-11-13 10:21:23</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
