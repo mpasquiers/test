@@ -28,7 +28,7 @@ public class ApacheString {
      * 
      * {talendTypes} String
      * 
-     * {Category} User Defined
+     * {Category} CMD String
      * 
      * {param} string("world") input: The string need to be printed.
      * 
