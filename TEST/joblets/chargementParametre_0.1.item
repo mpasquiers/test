@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties" xmlns:model="http://www.talend.com/joblet.ecore" xmi:version="2.0">
   <model:JobletProcess defaultContext="Default" jobType="Standard">
-    <context confirmationNeeded="false" name="Default"/>
+    <context confirmationNeeded="false" name="Default">
+      <contextParameter comment="" name="fichierParam" prompt="FILENAME?" promptNeeded="false" repositoryContextId="_HfRYEOcsEeiisoT47hPqSg" type="id_String" value="D:/prd/DEV.properties"/>
+    </context>
     <parameters>
       <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
       <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
@@ -78,7 +80,7 @@
       <elementParameter field="CLOSED_LIST" name="FILE_FORMAT" value="PROPERTIES_FORMAT"/>
       <elementParameter field="CLOSED_LIST" name="RETRIVE_MODE" show="false" value="RETRIVE_BY_SECTION"/>
       <elementParameter field="TEXT" name="SECTION_NAME" show="false" value="&quot;section&quot;"/>
-      <elementParameter field="FILE" name="FILENAME" value="&quot;C:/talend/Talend-Tools-Studio-20180411_1414-V7.0.1/workspace/in.properties&quot;"/>
+      <elementParameter field="FILE" name="FILENAME" value="context.fichierParam"/>
       <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
       <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -130,13 +132,13 @@
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3622466b-9ab6-414d-97d1-0903b8446147"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LskTNDPVKHlksWWGVqk8zKUn5jwQCJP6FfxLdf+Pdn9Pvtk4M0eXNQRRByMLf07aww5FWwUAV4SL
-loWzxPItOw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4788100a-8cf3-4a2f-b167-3d83496c636b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dkybipxVRaHIAgd/U1G8a/GPS4fke55aRF4QJcHPBYe+23BmE2u0xm8QtDGxQZc1Gi5Y/njTIi7o
-gdzZN7cO3w==</DigestValue></Reference></SignedInfo><SignatureValue>YBKEIUO/S/mQblumVgqaR4IsyN/OHix6kbSQmVn8l2YJNFMYWQRWblTe11i6MW73CchJdRDrImt9
-CLd+z43sjU5fJ0Jetj2TVYa2DKxuahyLs6sq7Aucpf6ZAXrq+dzWV+FWOU7X9ihaOyQTrB0W+I22
-wmdx7FvFMKkyZFk2cDWzB8so5t16Yf+Grc/gmvPOAc8TukJohLS0lNgsWpyviF42Ulk7m4cVIHxr
-FX2AYksFe9i2bz9q7OizkgZFM7vvwJ5SJHFdF8ovaUSGhQOR/cewb/iq09SGMzHYmZesnhl1XyMD
-Ebm/128yCN2ORAt8Z1nmiBJn3xFrHQl2XTE+SA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e24f2964-1431-4c06-b493-3f68578550a5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>k2EmDuR8VaHPwQEX34BTkvfEwPXwLJr9DmLK6b8CX8K4LXMjuARxTsjNDwPgPLjTtL+JiKJ2c74H
+HPAImnq7Tw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1e2ba6c4-dadb-46f1-9aab-002cba206309"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qFZ7NqBvt4rGPe/UVOP1htEJzIL5O77KIiZVVAyalAWaHUeD4jFjjFoW2IH5i/tU0VzhsWGWZVyU
+Yc8gKkB+hA==</DigestValue></Reference></SignedInfo><SignatureValue>0mwGM3WLeFsziSLI3fI8hORJAMkdVVnqcQNrJxEfS8LkHtD1ujzxzvwg6+vlwdcR26c/0WRq+ZHg
+SPxQA3Tw0+7xFCzYUHVxcZbltW1OEnpdVhKZNkDy+VWYO0CjDd2uYjKXBiVl0w05FA+HgPi/B7KK
+OOqC5Li5rxAiGk9+7ne5mZJWfl8YjpXT6de/SZpp2X8yOQsEfgP39Ij8EJ5S0/Stsh/mlHKOcIsc
+X1j0z0eFinS8OvAxXLqemCqv2NnCRkpzQdeY33Z60iDscTdvRbjcebDApyNj/p5US1gno6P6Dmhf
+DQDJhym7Zi3+5CnuUj/YdjR3lPegw4xopQiBBA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -160,4 +162,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4788100a-8cf3-4a2f-b167-3d83496c636b" Target="#_3622466b-9ab6-414d-97d1-0903b8446147"><Timestamp>2018-11-13 10:04:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1e2ba6c4-dadb-46f1-9aab-002cba206309" Target="#_e24f2964-1431-4c06-b493-3f68578550a5"><Timestamp>2018-11-13 10:09:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
