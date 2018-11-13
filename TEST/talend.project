@@ -274,6 +274,7 @@
       <relatedItems xmi:id="_9W7U8OcZEeiisoT47hPqSg" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_9W7U8ecZEeiisoT47hPqSg" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_9W7U8ucZEeiisoT47hPqSg" id="_YfoQAG-yEeibp7bCS_OOvQ - metadata" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_h15SEOciEeiisoT47hPqSg" id="SQLike" version="Latest" type="routine"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_9W7U8-cZEeiisoT47hPqSg">
       <baseItem xmi:id="_9W7U9OcZEeiisoT47hPqSg" id="_k9ux0GiTEeiOqsLvjspbzQ" version="0.1" type="job"/>
