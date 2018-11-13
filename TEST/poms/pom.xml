@@ -32,6 +32,7 @@
     <module>jobs/process/Cpal/cpals002_0.1</module>
     <module>jobs/joblets/gestionlog_0.1</module>
     <module>jobs/process/test/demolog_0.1</module>
+    <module>jobs/joblets/chargementparametre_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TEST</talend.project.name>
