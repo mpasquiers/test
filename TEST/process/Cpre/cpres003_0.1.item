@@ -4,11 +4,11 @@
     <contextParameter comment="" name="Emetteur" prompt="Emetteur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;vmdmcfic01@dmc.fr&quot;"/>
     <contextParameter comment="" name="SmtpPort" prompt="SmtpPort?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="25"/>
     <contextParameter comment="" name="SmtpServeur" prompt="SmtpServeur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;smtp.newel.net&quot;"/>
-    <contextParameter comment="" name="FtpHost" prompt="FtpHost?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;SRVLOGYS&quot;"/>
-    <contextParameter comment="" name="FtpPwd" prompt="FtpPwd?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;PTF01EP&quot;"/>
-    <contextParameter comment="" name="FtpRepDescente" prompt="FtpRepDescente?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/InterfaceDev/descente&quot;"/>
-    <contextParameter comment="" name="FtpRepRemonte" prompt="FtpRepRemonte?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/InterfaceDev//Remonte&quot;"/>
-    <contextParameter comment="" name="FtpUser" prompt="FtpUser?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;DMCFR/PE10FTP&quot;"/>
+    <contextParameter comment="" name="LogysFtpHost" prompt="LogysFtpHost?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;SRVLOGYS&quot;"/>
+    <contextParameter comment="" name="LogysFtpPwd" prompt="LogysFtpPwd?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;PTF01EP&quot;"/>
+    <contextParameter comment="" name="LogysFtpRepDescente" prompt="LogysFtpRepDescente?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/InterfaceDev/descente&quot;"/>
+    <contextParameter comment="" name="LogysFtpRepRemonte" prompt="LogysFtpRepRemonte?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/InterfaceDev//Remonte&quot;"/>
+    <contextParameter comment="" name="LogysFtpUser" prompt="LogysFtpUser?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;DMCFR/PE10FTP&quot;"/>
     <contextParameter comment="Répertoire fichier initialisation" name="RepDataIni" prompt="RepDataIni?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/datainidev&quot;"/>
     <contextParameter comment="Répertoire fichier en entrée" name="RepIn" prompt="RepIn?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/indev&quot;"/>
     <contextParameter comment="" name="RepLogys" prompt="RepLogys?" promptNeeded="false" type="id_String" value="d:/donnees/logys&quot;"/>
@@ -25,11 +25,11 @@
     <contextParameter comment="" name="Emetteur" prompt="Emetteur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;mpasquiers@dmc.fr&quot;"/>
     <contextParameter comment="" name="SmtpPort" prompt="SmtpPort?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="25"/>
     <contextParameter comment="" name="SmtpServeur" prompt="SmtpServeur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;smtp.newel.net&quot;"/>
-    <contextParameter comment="" name="FtpHost" prompt="FtpHost?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;SRVLOGYS&quot;"/>
-    <contextParameter comment="" name="FtpPwd" prompt="FtpPwd?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;PTF01EP&quot;"/>
-    <contextParameter comment="" name="FtpRepDescente" prompt="FtpRepDescente?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/descente&quot;"/>
-    <contextParameter comment="" name="FtpRepRemonte" prompt="FtpRepRemonte?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/remonte&quot;"/>
-    <contextParameter comment="" name="FtpUser" prompt="FtpUser?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;DMCFR\PE10FTP&quot;"/>
+    <contextParameter comment="" name="LogysFtpHost" prompt="LogysFtpHost?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;SRVLOGYS&quot;"/>
+    <contextParameter comment="" name="LogysFtpPwd" prompt="LogysFtpPwd?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;PTF01EP&quot;"/>
+    <contextParameter comment="" name="LogysFtpRepDescente" prompt="LogysFtpRepDescente?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/descente&quot;"/>
+    <contextParameter comment="" name="LogysFtpRepRemonte" prompt="LogysFtpRepRemonte?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/remonte&quot;"/>
+    <contextParameter comment="" name="LogysFtpUser" prompt="LogysFtpUser?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;DMCFR\PE10FTP&quot;"/>
     <contextParameter comment="Répertoire fichier initialisation" name="RepDataIni" prompt="RepDataIni?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/datainiprd&quot;"/>
     <contextParameter comment="Répertoire fichier en entrée" name="RepIn" prompt="RepIn?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/inprd&quot;"/>
     <contextParameter comment="" name="RepLogys" prompt="RepLogys?" promptNeeded="false" type="id_String" value="d:/donnees/logys&quot;"/>
@@ -452,13 +452,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fa7cc90d-998e-4836-9adc-356baf12e4d5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TB12kHjOnZ7+QMLXLT/w9gjfXqyTWuu5bYmu0U1T6UNnUy3fn0HnkHInOMJMWSWRQY0FQo4eDbIg
-xPN4WtrHxw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a6df7a2a-1a84-4a19-8772-4a67843d3282"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cyyICUwUlOjlP921aFVQ6LYLGSZ41RSUmW05W47OOoSpcyegEB9Ct0NrxeoQFI5/ER6iaOCyHDc+
-EYQxD7ueuQ==</DigestValue></Reference></SignedInfo><SignatureValue>asKTJuBcC5RGVDzIRrT63oFti4dmipn/fPtNEiWUHZkFwnI6V9nUEdTPyCQpXY4UbUt6ABpqL7Cb
-n6ZrkdvNxW6DOfVKCmZH1Zy2j9nEX0ruSYPeJPT9OgqLMDrm4D1yVUEt8R33SQkFFxv7dVfuyk8O
-lNYEx5pM8/9Rjb7NP20hBGdD7ucVpjjh6PVuEPHj+5mzUam69kLguxr7juUQ8BgxI2wXAFkUIUOV
-RVwlOKuUpWGkt4f2Je377yXLKFuUpqXeMtbJYpKIpjzusSAMvLSGLpvqfpURskgTtSltmfpivzq8
-gPoW1ssc4peP4yB+dLLWvU2c1YH6FgMRjk23xA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d5192a26-a53d-4f4c-bc22-23e80e2a3cc8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ptktznLwvH6p1Y+ftmlSDUTu2Joy2ujLC8areJu1DE5MDzVBA0oikQuLIwqetmwBEkPzwj2cv+1n
+x1Zu8eq8Kw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_97a93f0f-fe2f-4424-96e4-52819b33d51c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qhg8usSz5Zr+kqQ3Bh06rispvG36VSmLD5HKwoeb8mvOfffS1I/Wt5DT7cP00r4Yp6uMBkP9q7CB
+YZndCqTG0A==</DigestValue></Reference></SignedInfo><SignatureValue>iEyX/HJgzJc9cuFJzC/k2ZM948b53Rzjvwyd5v3iXiAma8xHyCuJ5xhL6o0y6eCYo3TfG6jcNMtI
+1mK3jpdaVfOEYyVQKFz0WQbFv57I9hX3pv/jnBYA4s7l1bcU5411nirt66zvBwRbuBQFoWX4BRkm
+vOZFTbZwSdXmkFGm+ofRCRg4eG8PRHdocNRiPgfhmf/rpi/px8dcTRF8ajES1Aa72FRzlU3in+Kd
+u+nW4Du/UfxFplhfrwBS6X1wnNlPhFUBybaQFU195/n17VvWy4ebAkWmpNRFfuV/XLyX/uKY8Ov6
+YGmU+FCyvgyzDmnvnFc3TBBli9rkAXYZaXcGDg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -482,4 +482,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a6df7a2a-1a84-4a19-8772-4a67843d3282" Target="#_fa7cc90d-998e-4836-9adc-356baf12e4d5"><Timestamp>2018-11-13 10:47:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_97a93f0f-fe2f-4424-96e4-52819b33d51c" Target="#_d5192a26-a53d-4f4c-bc22-23e80e2a3cc8"><Timestamp>2018-11-13 17:01:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
