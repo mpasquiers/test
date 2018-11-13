@@ -37,6 +37,7 @@
     <module>jobs/process/test/demo_tmap_0.1</module>
     <module>jobs/process/test/demo_mysql_0.1</module>
     <module>jobs/process/test/demo_tjava_0.1</module>
+    <module>jobs/process/test/demojob_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TEST</talend.project.name>
