@@ -62,6 +62,12 @@
     </dependency>
     <dependency>
       <groupId>org.example.test.joblet</groupId>
+      <artifactId>chargementParametre</artifactId>
+      <version>0.1.0</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.example.test.joblet</groupId>
       <artifactId>gestionLog</artifactId>
       <version>0.1.0</version>
       <type>pom</type>
