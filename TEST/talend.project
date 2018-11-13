@@ -406,6 +406,7 @@
       <relatedItems xmi:id="_9XEefucZEeiisoT47hPqSg" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_9XEef-cZEeiisoT47hPqSg" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_9XEegOcZEeiisoT47hPqSg" id="_YfoQAG-yEeibp7bCS_OOvQ - metadata" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_8ytd0OciEeiisoT47hPqSg" id="SQLike" version="Latest" type="routine"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_9XEegecZEeiisoT47hPqSg">
       <baseItem xmi:id="_9XEegucZEeiisoT47hPqSg" id="_ihE-kHCpEeiwkYhlHUJyug" version="0.1" type="job"/>
