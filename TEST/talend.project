@@ -504,6 +504,7 @@
       <relatedItems xmi:id="_KSTcPOczEeiisoT47hPqSg" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_KSTcPeczEeiisoT47hPqSg" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="_KSTcPuczEeiisoT47hPqSg" id="_RgS2QOcaEeiisoT47hPqSg - inf_client" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_PTTvkOdBEeiisoT47hPqSg" id="_RgS2QOcaEeiisoT47hPqSg - inf_client_intitule" version="Latest" type="schema"/>
     </ItemsRelations>
     <migrationTask xmi:id="_7kr30OabEeipONB1Z5jsPQ" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_7k1o0OabEeipONB1Z5jsPQ" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
