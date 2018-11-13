@@ -34,6 +34,7 @@
     <module>jobs/process/test/demolog_0.1</module>
     <module>jobs/joblets/chargementparametre_0.1</module>
     <module>jobs/process/test/demo_master_0.1</module>
+    <module>jobs/process/test/demo_tmap_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TEST</talend.project.name>
