@@ -43,7 +43,7 @@ public class DMCUtils {
         
         heure = duration / 3600000;
         minute = (duration % 3600000) / 60000;
-        seconde = (duration % 3600000)%60000 ;
+        seconde = ((duration % 3600000)%60000) / 1000 ;
         
         return heure + " heure " + minute  +" minute "+  seconde + " seconde";
         
