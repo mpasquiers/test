@@ -2,18 +2,24 @@
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="LogysCpre" prompt="LogysCpre?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;CPRE&quot;"/>
     <contextParameter comment="" name="RepLogys" prompt="RepLogys?" promptNeeded="false" repositoryContextId="_hQbgsG7VEeinfNwvcIrX-A" type="id_String" value="d:/donnees/logys"/>
-    <contextParameter comment="" name="RepFichierLog" prompt="RepFichierLog?" promptNeeded="false" type="id_String" value="&quot;d:/prd/de010/log.w&quot;"/>
     <contextParameter comment="" name="RepPrd" prompt="RepPrd?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/de010&quot;"/>
     <contextParameter comment="" name="RepPrdLogys" prompt="RepPrdLogys?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/de010/Logys&quot;"/>
-    <contextParameter comment="" name="sequenceExpl" prompt="sequenceExpl?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="nomSequence" prompt="nomSequence?" promptNeeded="false" repositoryContextId="_E1OekOcqEeiisoT47hPqSg" type="id_String" value=""/>
+    <contextParameter comment="" name="MailDestError" prompt="MailDestError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;sfreexploitanolc@dmc.fr&quot;"/>
+    <contextParameter comment="" name="MailEmetError" prompt="MailEmetError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;vmdmcfic01@dmc.fr&quot;"/>
+    <contextParameter comment="" name="SmtpPort" prompt="SmtpPort?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="25"/>
+    <contextParameter comment="" name="SmtpServeur" prompt="SmtpServeur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;smtp.newel.net&quot;"/>
   </context>
   <context confirmationNeeded="false" name="Prod">
     <contextParameter comment="" name="LogysCpre" prompt="LogysCpre?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;MAXE&quot;"/>
     <contextParameter comment="" name="RepLogys" prompt="RepLogys?" promptNeeded="false" repositoryContextId="_hQbgsG7VEeinfNwvcIrX-A" type="id_String" value="d:/donnees/logys"/>
-    <contextParameter comment="" name="RepFichierLog" prompt="RepFichierLog?" promptNeeded="false" type="id_String" value="&quot;d:/prd/pe010/log.w&quot;"/>
     <contextParameter comment="" name="RepPrd" prompt="RepPrd?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/pe010&quot;"/>
     <contextParameter comment="" name="RepPrdLogys" prompt="RepPrdLogys?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/pe010/Logys&quot;"/>
-    <contextParameter comment="" name="sequenceExpl" prompt="sequenceExpl?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="nomSequence" prompt="nomSequence?" promptNeeded="false" repositoryContextId="_E1OekOcqEeiisoT47hPqSg" type="id_String" value=""/>
+    <contextParameter comment="" name="MailDestError" prompt="MailDestError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;sfreexploitanolc@dmc.fr&quot;"/>
+    <contextParameter comment="" name="MailEmetError" prompt="MailEmetError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;mpasquiers@dmc.fr&quot;"/>
+    <contextParameter comment="" name="SmtpPort" prompt="SmtpPort?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="25"/>
+    <contextParameter comment="" name="SmtpServeur" prompt="SmtpServeur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;smtp.newel.net&quot;"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -120,8 +126,9 @@
     <routinesParameter id="_W_Sy8GiREeiOqsLvjspbzQ" name="TalendString"/>
     <routinesParameter id="_W_b84GiREeiOqsLvjspbzQ" name="TalendStringUtil"/>
     <routinesParameter id="_7skogOabEeipONB1Z5jsPQ" name="SQLike"/>
+    <routinesParameter id="_hcrO0OfoEei1bOo2uAs1XA" name="DMCUtils"/>
   </parameters>
-  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="160">
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.RepPrdLogys+&quot;/cpre/atraiter&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
@@ -143,7 +150,7 @@
     <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileInputPositional" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160">
+  <node componentName="tFileInputPositional" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputPositional_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
@@ -186,7 +193,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="160">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -214,7 +221,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFileOutputPositional" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="160">
+  <node componentName="tFileOutputPositional" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputPositional_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
@@ -249,11 +256,7 @@
       <column comment="" key="false" length="260" name="newColumn" nullable="true" originalLength="260" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="352">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="352">
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_2"/>
     <elementParameter field="FILE" name="FILENAME" value="context.RepPrdLogys+&quot;/cpre/&quot;+context.LogysCpre+&quot;.DAT&quot;"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
@@ -269,7 +272,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileCopy_2"/>
   </node>
-  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="352">
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_2"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.RepPrdLogys+&quot;/cpre/atraiter&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
@@ -289,7 +292,7 @@
     <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="352">
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_1"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
@@ -307,7 +310,7 @@
       <column comment="" key="false" length="260" name="newColumn" nullable="true" originalLength="260" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="352">
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_3"/>
     <elementParameter field="FILE" name="FILENAME" value="context.RepPrdLogys+&quot;/cpre/&quot;+context.LogysCpre+&quot;.DAT&quot;"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
@@ -323,10 +326,27 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileCopy_3"/>
   </node>
+  <node componentName="gestionLog" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="512" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="gestionLog_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="LABEL" value="gestionLog"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputPositional_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileCopy_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputPositional_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputPositional_1" target="tMap_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -341,32 +361,23 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Tfusion"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tFileCopy_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileCopy_2" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_2" target="tFileCopy_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileCopy_2" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_2" target="tFileCopy_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileCopy_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate3"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileCopy_3" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_3" target="tFileList_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileCopy_3" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_3" target="tFileList_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <note opaque="true" posX="192" posY="0" sizeHeight="97" sizeWidth="321" text="Fusion des fichiers CPRE*.dat récupérés dans&#13;&#10;d:/donnees/logys/cpre/CPRE.dat&#13;&#10;"/>
-  <note opaque="true" posX="32" posY="256" sizeHeight="64" sizeWidth="513" text=" une fois fusionner , déplacement des fichiers logys de &#13;&#10;prd/pe010/Logys/CPRE/ atraiter dans prd/pe010/Logys/CPRE&#13;&#10;"/>
+  <note opaque="true" posX="480" posY="224" sizeHeight="64" sizeWidth="513" text=" une fois fusionner , déplacement des fichiers logys de &#13;&#10;prd/pe010/Logys/CPRE/ atraiter dans prd/pe010/Logys/CPRE&#13;&#10;"/>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_2"/>
@@ -383,13 +394,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5bf7a64c-8601-4745-ba5b-98a54cf2f46d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>u3o+4nBcydECY7t8hLIKPdNceyREFG8JSou/mCEcANTsixNUMDbLPZLo/VeXftTAb82V0pZIo2KN
-vgu0G9ixhw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1bc05093-1a6b-48a5-a5ec-0da4eda0f14f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l3jiqCnOnbDpk1T+aUa8yIjX6mUtYSDTkhsS/CV0+yBiqTm5taDZpkpUgBr7d21ey/LqCaLQq51/
-Lm6DsWHBPQ==</DigestValue></Reference></SignedInfo><SignatureValue>p3zW88g6zlfr4Hs9hMsuQ+JjI3rNuQq6wqAKm7qLrMpUo1TCl03aldF0+zCHf7hMJdxTw214ygMa
-ZNXtNEeuPhrkR9EumoJ6jhpZkKtW0nc/YBDRCuZftOs+ePVnTITllqY0U+Mqloj0NxLUNUDfEsIK
-RsRXh3DbmZbAyp4+bRLqd8+eP+ffDRMi2afdkffRYBQ8X5Qtp3u0EuxN7vm3QAi2GWHmt7e25hEH
-Rb1sRryF91qijRcrJNfsfIQMFa0ZArV/tzzWHC5mOeqCjD0rAx/yswq3avS8xky2mVjfqJ226fbF
-fazTqM54/Gqx2Q6FqOZlscdeKhYcKJ75tELogw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="gestionLog_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9753fe7f-3a29-4515-8a0f-9f6ee4f5152f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Dv5ZAmW+Cb07XY+uANAqgCgbCCZ5/t53cOeFlFUGQ9oepo9bmhJuYbDlTeSORAUg8xdtBuQmIfRU
+/zJe1/PHeg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d500078a-5632-4426-81ad-3dbf9a2634f6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2fIWLqxa/AH49aP32ITQ0rbHasqmnv6d5/oH4bNqJoT7TGvBWfnYYF4T+/n5fhRh3WpdZUddaWHM
+hO/Pr+b5dA==</DigestValue></Reference></SignedInfo><SignatureValue>X8yDK5M9LBitjb9rn0/YHmfzmAEv/A9kyt/IPkDFUMBVEumf9/DspJvcOrWdBFQT7KQrAcLBSZEV
+3nv61bZH/nzYrZFjeAP57nsS2hYOh72QyVInqtsGa8uXlDjHVzj2UQnbqJRlc0jvs/J+P2fqFodo
+3DqRJiasHkte9EdSYQaBPyu8aWhEbNnjzgHwx584vFAEsrL2dXaMzX3BjlB33KtSYA26QP6kszPF
+PD0TVbpsfzzH6+YJmLulwalTWncieLaYZ7WlgUqy6za2b+DeSJr7GdKKHukSbuP0RMlMmx6CVV9C
+qKrc9UeMX8bEuZJy+KFqCrTDsAnax4Ce9Qh/KQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -413,4 +429,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1bc05093-1a6b-48a5-a5ec-0da4eda0f14f" Target="#_5bf7a64c-8601-4745-ba5b-98a54cf2f46d"><Timestamp>2018-11-13 17:01:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d500078a-5632-4426-81ad-3dbf9a2634f6" Target="#_9753fe7f-3a29-4515-8a0f-9f6ee4f5152f"><Timestamp>2018-11-14 10:03:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
