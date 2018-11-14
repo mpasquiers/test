@@ -889,7 +889,6 @@
     </ItemsRelations>
     <ItemsRelations xmi:id="_tfJSoOgeEeiMtq6iVbzstg">
       <baseItem xmi:id="_tfJSoegeEeiMtq6iVbzstg" id="_0x3PIOgaEeiMtq6iVbzstg" version="0.1" type="job"/>
-      <relatedItems xmi:id="_tfJSougeEeiMtq6iVbzstg" id="_e7mBwGf6Eei7nvte-9yivQ" version="Latest" type="context"/>
       <relatedItems xmi:id="_tfJSo-geEeiMtq6iVbzstg" id="SQLike" version="Latest" type="routine"/>
       <relatedItems xmi:id="_tfJSpOgeEeiMtq6iVbzstg" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_tfJSpegeEeiMtq6iVbzstg" id="Relational" version="Latest" type="routine"/>
@@ -908,6 +907,7 @@
       <relatedItems xmi:id="_sUL0BOghEeiMtq6iVbzstg" id="_vdx3oOggEeiMtq6iVbzstg - metadata" version="Latest" type="schema"/>
       <relatedItems xmi:id="_9oWqgOghEeiMtq6iVbzstg" id="_HfRYEOcsEeiisoT47hPqSg" version="Latest" type="context"/>
       <relatedItems xmi:id="_9oWqgeghEeiMtq6iVbzstg" id="_YTIMQOcrEeiisoT47hPqSg" version="Latest" type="joblet"/>
+      <relatedItems xmi:id="_S5_70OglEeiMtq6iVbzstg" id="_an880GlvEeiq3tGRrRNTtg" version="Latest" type="context"/>
     </ItemsRelations>
     <migrationTask xmi:id="_7kr30OabEeipONB1Z5jsPQ" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_7k1o0OabEeipONB1Z5jsPQ" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
