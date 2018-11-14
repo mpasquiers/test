@@ -21,16 +21,16 @@ package routines;
 public class DMCUtils {
 
     /**
-     * helloExample: not return value, only print "hello" + message.
+     * timeToString: not return value, only print "hello" + message.
      * 
      * 
      * {talendTypes} String
      * 
-     * {Category} User Defined
+     * {Category} DMCUtilsd
      * 
-     * {param} string("world") input: The string need to be printed.
+     * {param} Long("duration") input: The duration in milli seconde.
      * 
-     * {example} helloExemple("world") # hello world !.
+     * {example} timeToString(72056) #  !.
      */
     public static String timeToString(Long duration) {
         if (duration == null) {
