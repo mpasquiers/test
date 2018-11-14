@@ -133,20 +133,18 @@
       <metadata connector="FLOW" label="metadata" name="stats">
         <column comment="" key="false" length="20" name="moment" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
         <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="10" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="10" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
-        <uiProperties/>
+        <uiProperties shellMaximized="true"/>
         <varTables name="Var" sizeState="INTERMEDIATE"/>
         <outputTables name="stats" sizeState="INTERMEDIATE">
           <mapperTableEntries expression="row4.moment" name="moment" nullable="true" type="id_Date"/>
           <mapperTableEntries expression="row4.project" name="project" nullable="true" type="id_String"/>
           <mapperTableEntries expression="context.nomSequence==null || &quot;&quot;.equals(context.nomSequence) ? jobName : context.nomSequence " name="sequence" nullable="true" type="id_String"/>
           <mapperTableEntries expression="row4.job" name="job" nullable="true" type="id_String"/>
-          <mapperTableEntries expression="00" name="code" nullable="true" type="id_Integer"/>
           <mapperTableEntries expression="row4.message_type  +&quot; &quot;+row4.message +&quot; &quot;+ row4.duration " name="message" nullable="true" type="id_String"/>
         </outputTables>
         <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
@@ -201,11 +199,6 @@
         <elementValue elementRef="PADDING_CHAR" value="' '"/>
         <elementValue elementRef="ALIGN" value="'L'"/>
         <elementValue elementRef="KEEP" value="'A'"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
-        <elementValue elementRef="SIZE" value="3"/>
-        <elementValue elementRef="PADDING_CHAR" value="' '"/>
-        <elementValue elementRef="ALIGN" value="'L'"/>
-        <elementValue elementRef="KEEP" value="'A'"/>
         <elementValue elementRef="SCHEMA_COLUMN" value="message"/>
         <elementValue elementRef="SIZE" value="255"/>
         <elementValue elementRef="PADDING_CHAR" value="' '"/>
@@ -230,7 +223,6 @@
         <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
@@ -272,9 +264,8 @@
       <metadata connector="FLOW" label="metadata" name="metrics">
         <column comment="" key="false" length="20" name="moment" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
         <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="10" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="10" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
@@ -285,7 +276,6 @@
           <mapperTableEntries expression="row1.project" name="project" nullable="true" type="id_String"/>
           <mapperTableEntries expression="context.nomSequence " name="sequence" nullable="true" type="id_String"/>
           <mapperTableEntries expression="row1.job" name="job" nullable="true" type="id_String"/>
-          <mapperTableEntries expression="100" name="code" nullable="true" type="id_Integer"/>
           <mapperTableEntries expression="row1.label +&quot;=&quot;+  row1.count " name="message" nullable="true" type="id_String"/>
         </outputTables>
         <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
@@ -341,11 +331,6 @@
         <elementValue elementRef="PADDING_CHAR" value="' '"/>
         <elementValue elementRef="ALIGN" value="'L'"/>
         <elementValue elementRef="KEEP" value="'A'"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
-        <elementValue elementRef="SIZE" value="3"/>
-        <elementValue elementRef="PADDING_CHAR" value="' '"/>
-        <elementValue elementRef="ALIGN" value="'L'"/>
-        <elementValue elementRef="KEEP" value="'A'"/>
         <elementValue elementRef="SCHEMA_COLUMN" value="message"/>
         <elementValue elementRef="SIZE" value="255"/>
         <elementValue elementRef="PADDING_CHAR" value="' '"/>
@@ -370,7 +355,6 @@
         <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
@@ -413,9 +397,8 @@
       <metadata connector="FLOW" label="metadata" name="logs">
         <column comment="" key="false" length="20" name="moment" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
         <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="10" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="10" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
@@ -426,7 +409,6 @@
           <mapperTableEntries expression="row2.project" name="project" nullable="true" type="id_String"/>
           <mapperTableEntries expression="context.nomSequence " name="sequence" nullable="true" type="id_String"/>
           <mapperTableEntries expression="row2.job" name="job" nullable="true" type="id_String"/>
-          <mapperTableEntries expression="row2.code " name="code" nullable="true" type="id_Integer"/>
           <mapperTableEntries expression="row2.message " name="message" nullable="true" type="id_String"/>
         </outputTables>
         <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
@@ -479,11 +461,6 @@
         <elementValue elementRef="PADDING_CHAR" value="' '"/>
         <elementValue elementRef="ALIGN" value="'L'"/>
         <elementValue elementRef="KEEP" value="'A'"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
-        <elementValue elementRef="SIZE" value="3"/>
-        <elementValue elementRef="PADDING_CHAR" value="' '"/>
-        <elementValue elementRef="ALIGN" value="'L'"/>
-        <elementValue elementRef="KEEP" value="'A'"/>
         <elementValue elementRef="SCHEMA_COLUMN" value="message"/>
         <elementValue elementRef="SIZE" value="255"/>
         <elementValue elementRef="PADDING_CHAR" value="' '"/>
@@ -508,7 +485,6 @@
         <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
@@ -551,9 +527,8 @@
       <metadata connector="FLOW" label="metadata" name="copyOflogs">
         <column comment="" key="false" length="20" name="moment" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
         <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="10" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="10" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
@@ -564,7 +539,6 @@
           <mapperTableEntries expression="row3.project" name="project" nullable="true" type="id_String"/>
           <mapperTableEntries expression="context.nomSequence==null || &quot;&quot;.equals(context.nomSequence) ? jobName : context.nomSequence " name="sequence" nullable="true" type="id_String"/>
           <mapperTableEntries expression="row3.job" name="job" nullable="true" type="id_String"/>
-          <mapperTableEntries expression="row3.code " name="code" nullable="true" type="id_Integer"/>
           <mapperTableEntries expression="row3.message " name="message" nullable="true" type="id_String"/>
         </outputTables>
         <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
@@ -617,11 +591,6 @@
         <elementValue elementRef="PADDING_CHAR" value="' '"/>
         <elementValue elementRef="ALIGN" value="'L'"/>
         <elementValue elementRef="KEEP" value="'A'"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
-        <elementValue elementRef="SIZE" value="3"/>
-        <elementValue elementRef="PADDING_CHAR" value="' '"/>
-        <elementValue elementRef="ALIGN" value="'L'"/>
-        <elementValue elementRef="KEEP" value="'A'"/>
         <elementValue elementRef="SCHEMA_COLUMN" value="message"/>
         <elementValue elementRef="SIZE" value="255"/>
         <elementValue elementRef="PADDING_CHAR" value="' '"/>
@@ -646,7 +615,6 @@
         <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
@@ -662,7 +630,6 @@
         <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
@@ -778,13 +745,13 @@
     </subjob>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8fd1f06f-a4e5-40ed-ba29-925367f52ea0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tl4PsRFOCfHfXCwWBMZ60h1xGLS40kgAq9cuI4bj00xJs0mgJlb32S9ZTMknSPaWYX0FhIXQ6ToG
-g2HHyh9mQQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5d1469a7-25df-4048-be36-fa32e6d99e3d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tBgzidAX3IJvKwR39Vg894mgnE5Fv8GgKZqBSkywJrxhJJWhIH3vQJd/rTvvxN7tk+MQ+7J0eMhV
-hSRAxqCdIw==</DigestValue></Reference></SignedInfo><SignatureValue>QOlVPtmHZ82CG00xU9WSIkAJ2a1CusJZ2f9PtTRZB7w7/gJ9bmKGPEG7bYHmtUJ3y31EiIsJf1VH
-q3rqlvOAzd/mqcLxPcRCmwDnIbttUYPj1TpVgHLU+4IZ99U2fLfFNEliKkBk6VKRwnIUYGLoKwGW
-b9GNYj1RscpWPlkzu+8tVxsdfsFKtzjD8RUMB+yBny54l5YlTG+xYeLJ8PfV6MxzAKMcj7HwYg76
-047BqscvZqfhNT4WWsXxv/I3P5+9nZZWNXUbh9cP+KZks1HqIcInMgCmCJhD40eRoIE4bq8dOvk/
-9mIKikBC4DuYgBMky431iGFccZT4iVLrvWQoDQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_324e1c22-475b-4e1a-a008-2d1a99c0c2a3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hfRJgERm1Gj2ZZ+67llxBpmLjupvmwe1EvODZP3F+X3qvzfKyoxJoGQZ5f4abD+r4GSZsqgYNABe
+ZZwfYvp4UQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cca87930-4fea-4680-a7a3-fe65b8b696cb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Oel/yfG4/SpVfxtmg7Zzgq1I0xf6ZmicwmNxEpjTO860dFOrmiOD1faiff6lIMjGZBJsgYi83Z/r
+xVkDHuneeA==</DigestValue></Reference></SignedInfo><SignatureValue>PlI8+hWIsaNSkz8tCXE2e4BB9eQda302ZOKeyPVU+RBWAKHKotXnXROzZ2b0eG9R5DDWL8uxDMEW
+L29ELSs2A9jpGAw7Z+5CE25L9pi/l8QBGhLO+0ILmcvKG2Jvi/q8QF/E8RMX8ME8HnaWi7wrCiQf
+oSrDNrdDfqmtAyfHeCyzPwKuyT2drPztiTGFUiIdZxV7IJRAzl/c4JiIZgT8SeEAHXgjafbK8rA0
+v820I9tZO0tLcZTKydD4u6PuBgzBsbgaTqsNwSh+cX/ZBui+BYJjikyyNBfYbEB91BC01B+llHrw
+fDcmAMFvqmFrwD3SQRQ6pdYrsL5+9g4h/3Y0hQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -808,4 +775,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5d1469a7-25df-4048-be36-fa32e6d99e3d" Target="#_8fd1f06f-a4e5-40ed-ba29-925367f52ea0"><Timestamp>2018-11-14 08:26:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cca87930-4fea-4680-a7a3-fe65b8b696cb" Target="#_324e1c22-475b-4e1a-a008-2d1a99c0c2a3"><Timestamp>2018-11-14 08:28:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
