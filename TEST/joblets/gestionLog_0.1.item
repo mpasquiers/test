@@ -349,8 +349,8 @@
       <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
       <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
       <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
-      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
       <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
       <elementParameter field="TEXT" name="LABEL" value="log.w"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -609,8 +609,8 @@
       <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
       <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
       <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
-      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
       <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
       <elementParameter field="TEXT" name="LABEL" value="log.w"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -749,13 +749,13 @@
     </subjob>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7c2cee36-61a4-46c1-ab52-8cfb0cd30a37"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tNa0X+cFO+esaOPkKrJtBCNvvWYVL6gOgVGYTn68sV/Hkk4t4xawORuJB715myvDJgwafsp3jKzv
-034YWG3kpA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_06e95e68-c52b-4b7e-8860-308b847418b3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P6V4xEi5OBmvw/JzPzIMRA/QEcoZRWa6h307FqEFU1ivW7Ble7NmfgtT+BfLUHLS4/dmnaSkSGQg
-lRrrBFyN+A==</DigestValue></Reference></SignedInfo><SignatureValue>gsz1bqvS8tzn8cRPT8HAYZsWJDqfqtOKAkEdKxbxlbbY6L4j6mMavgQQw2odV59MaIPnK5y96/qQ
-ozyrC2PV/JV9FX2mY4+CEJQaCUEZOEuo85WDl4p6e3vPHQXgTUSaWJpij9TtfbPTXjI6s1pHnmTM
-mRAmr7CHh57ah6QPiRVVVKqDHlM85Zyd0Kjkw0r89S9UesqVX3mHWxITTUFwohX/GmjEYEqj1XJx
-X2rS1HVAYhB87RtjN3LbwLSZVXX8wFjrWrmJMxJKdPpWkpQBQJtnRXGuCe2wZmRNORzRsftPSTDI
-FP30jLgOpwNvO64lalL/DywvuGF0vwEhHJtv7Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_eadecaa6-1431-4cd7-b775-e52f3fb7086c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hhNyly+l8IUrlvV/g1b5Fi9FA/6vAVRCU4EnzaodHVaaXuKO74TPxZhW7RzWxIg2mGDEu5Tu61K0
+avA/6w46eA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7e5a6af5-c79d-4b1b-a47f-d361e69029d2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Rz3xouJ8rCfVxw9RM6BQaWHJLkceVaYrWHX0bU+RfIYcoHsYxJONlJDJST2D1s6Gs2xXCVU9qiUY
+0w6v8CQS6A==</DigestValue></Reference></SignedInfo><SignatureValue>O7iXHmOoHL33acJlu8BvL6ZXs53+LnuBkJy5+eMqZjV6MvCJKzkQBAQpRX1NRMUvxyVRkXu8nopV
+2C0DZ0dyxCbcRf2SwURtWm9WckqujMWi10u+EsJ5eN7hKFS5JCfh0KtWK2n2TgM93aRxVMk3ttT/
+l4q+FyUMUub6mVCHLbcKCHDyUHq9YJ9wMYs3hUAywSWwrJyPyYAVZla9Dp7zz2i8LJCI6JUpon/O
+wI1fSoQSb9QR6z6yfE0XFXbF+wQbTBhT8hT3DED/dU6cJFHrNMMQFcF0fKlgy28AILmw1QyeB7h8
+eEhfadSJHrUGAS6j/LreEzCGiIF9m/ns/l4IeA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -779,4 +779,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_06e95e68-c52b-4b7e-8860-308b847418b3" Target="#_7c2cee36-61a4-46c1-ab52-8cfb0cd30a37"><Timestamp>2018-11-14 09:06:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7e5a6af5-c79d-4b1b-a47f-d361e69029d2" Target="#_eadecaa6-1431-4cd7-b775-e52f3fb7086c"><Timestamp>2018-11-14 09:07:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
