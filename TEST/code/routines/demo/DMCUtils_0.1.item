@@ -57,8 +57,21 @@ public class DMCUtils {
         	mHeure = heure + " heures ";
         }
         
+        if (minute == 0 )  {
+        	mMinute = "";
+        } else if (minute == 1 ) {
+        	mMinute = minute + " minute ";
+        } else {
+        	mMinute = minute + " minutes ";
+        }
         
-        
+        if (seconde == 0 )  {
+        	mSeconde = " 0 seconde";
+        } else if (seconde == 1 ) {
+        	mSeconde = seconde + " seconde ";
+        } else {
+        	mSeconde = seconde + " secondes ";
+        }
         
         return heure + " heure " + minute  +" minute "+  seconde + " seconde";
         
