@@ -802,6 +802,10 @@
       <relatedItems xmi:id="_9cZ6x-ddEeiJE519S3mfLg" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_9cZ6yOddEeiJE519S3mfLg" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_9cZ6yeddEeiJE519S3mfLg" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ajnTMOgSEeiMtq6iVbzstg" id="_z-UigGibEeiOqsLvjspbzQ" version="Latest" type="context"/>
+      <relatedItems xmi:id="_ajnTMegSEeiMtq6iVbzstg" id="_E1OekOcqEeiisoT47hPqSg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_ajnTMugSEeiMtq6iVbzstg" id="_hMR34OcjEeiisoT47hPqSg" version="Latest" type="joblet"/>
+      <relatedItems xmi:id="_ajnTM-gSEeiMtq6iVbzstg" id="DMCUtils" version="Latest" type="routine"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_9cZ6y-ddEeiJE519S3mfLg">
       <baseItem xmi:id="_9cZ6zOddEeiJE519S3mfLg" id="_VqkGkG_iEeibp7bCS_OOvQ" version="0.1" type="job"/>
