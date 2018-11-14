@@ -1,45 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="MailDestError" prompt="MailDestError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;sfreexploitanolc@dmc.fr&quot;"/>
     <contextParameter comment="" name="MailEmetError" prompt="MailEmetError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;vmdmcfic01@dmc.fr&quot;"/>
     <contextParameter comment="" name="SmtpPort" prompt="SmtpPort?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="25"/>
     <contextParameter comment="" name="SmtpServeur" prompt="SmtpServeur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;smtp.newel.net&quot;"/>
-    <contextParameter comment="" name="LogysFtpHost" prompt="LogysFtpHost?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;SRVLOGYS&quot;"/>
-    <contextParameter comment="" name="LogysFtpPwd" prompt="LogysFtpPwd?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;PTF01EP&quot;"/>
-    <contextParameter comment="" name="LogysFtpRepDescente" prompt="LogysFtpRepDescente?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/InterfaceDev/descente&quot;"/>
-    <contextParameter comment="" name="LogysFtpRepRemonte" prompt="LogysFtpRepRemonte?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/InterfaceDev//Remonte&quot;"/>
-    <contextParameter comment="" name="LogysFtpUser" prompt="LogysFtpUser?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;DMCFR/PE10FTP&quot;"/>
-    <contextParameter comment="Répertoire fichier initialisation" name="RepDataIni" prompt="RepDataIni?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/datainidev&quot;"/>
-    <contextParameter comment="Répertoire fichier en entrée" name="RepIn" prompt="RepIn?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/indev&quot;"/>
-    <contextParameter comment="" name="RepLogys" prompt="RepLogys?" promptNeeded="false" type="id_String" value="d:/donnees/logys&quot;"/>
-    <contextParameter comment="Répertoire fichier en sortie " name="RepOut" prompt="RepOut?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;/donnees/outdev&quot;"/>
-    <contextParameter comment="R2pertoire fichier permanent" name="RepPerm" prompt="RepPerm?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/permdev&quot;"/>
-    <contextParameter comment="Répertoire fichier temporaire" name="RepTemp" prompt="RepTemp?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/tempdev&quot;"/>
-    <contextParameter comment="Répertoire versionning fichier permanent" name="RepVersion" prompt="RepVersion?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/versiondev&quot;"/>
-    <contextParameter comment="" name="RepFichierLog" prompt="RepFichierLog?" promptNeeded="false" type="id_String" value="&quot;d:/prd/de010/log.w&quot;"/>
-    <contextParameter comment="" name="RepPrd" prompt="RepPrd?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/de010&quot;"/>
-    <contextParameter comment="" name="RepPrdLogys" prompt="RepPrdLogys?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/de010/Logys&quot;"/>
+    <contextParameter comment="" name="nomSequence" prompt="nomSequence?" promptNeeded="false" repositoryContextId="_E1OekOcqEeiisoT47hPqSg" type="id_String" value=""/>
+    <contextParameter comment="" name="fichierParam" prompt="FILENAME?" promptNeeded="false" repositoryContextId="_HfRYEOcsEeiisoT47hPqSg" type="id_String" value="D:/prd/DEV.properties"/>
+    <contextParameter comment="" name="RepFichierLog" prompt="RepFichierLog?" promptNeeded="false" repositoryContextId="_E1OekOcqEeiisoT47hPqSg" type="id_String" value="&quot;d:/prd/de010/log.w&quot;"/>
   </context>
   <context confirmationNeeded="false" name="Prod">
     <contextParameter comment="" name="MailDestError" prompt="MailDestError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;sfreexploitanolc@dmc.fr&quot;"/>
     <contextParameter comment="" name="MailEmetError" prompt="MailEmetError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;mpasquiers@dmc.fr&quot;"/>
     <contextParameter comment="" name="SmtpPort" prompt="SmtpPort?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="25"/>
     <contextParameter comment="" name="SmtpServeur" prompt="SmtpServeur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;smtp.newel.net&quot;"/>
-    <contextParameter comment="" name="LogysFtpHost" prompt="LogysFtpHost?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;SRVLOGYS&quot;"/>
-    <contextParameter comment="" name="LogysFtpPwd" prompt="LogysFtpPwd?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;PTF01EP&quot;"/>
-    <contextParameter comment="" name="LogysFtpRepDescente" prompt="LogysFtpRepDescente?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/descente&quot;"/>
-    <contextParameter comment="" name="LogysFtpRepRemonte" prompt="LogysFtpRepRemonte?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/remonte&quot;"/>
-    <contextParameter comment="" name="LogysFtpUser" prompt="LogysFtpUser?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;DMCFR\PE10FTP&quot;"/>
-    <contextParameter comment="Répertoire fichier initialisation" name="RepDataIni" prompt="RepDataIni?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/datainiprd&quot;"/>
-    <contextParameter comment="Répertoire fichier en entrée" name="RepIn" prompt="RepIn?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/inprd&quot;"/>
-    <contextParameter comment="" name="RepLogys" prompt="RepLogys?" promptNeeded="false" type="id_String" value="d:/donnees/logys&quot;"/>
-    <contextParameter comment="Répertoire fichier en sortie " name="RepOut" prompt="RepOut?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;/donnees/outprd&quot;"/>
-    <contextParameter comment="R2pertoire fichier permanent" name="RepPerm" prompt="RepPerm?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/permprd&quot;"/>
-    <contextParameter comment="Répertoire fichier temporaire" name="RepTemp" prompt="RepTemp?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/tempprd&quot;"/>
-    <contextParameter comment="Répertoire versionning fichier permanent" name="RepVersion" prompt="RepVersion?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/versionprd&quot;"/>
-    <contextParameter comment="" name="RepFichierLog" prompt="RepFichierLog?" promptNeeded="false" type="id_String" value="&quot;d:/prd/pe010/log.w&quot;"/>
-    <contextParameter comment="" name="RepPrd" prompt="RepPrd?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/pe010&quot;"/>
-    <contextParameter comment="" name="RepPrdLogys" prompt="RepPrdLogys?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/pe010/Logys&quot;"/>
+    <contextParameter comment="" name="nomSequence" prompt="nomSequence?" promptNeeded="false" repositoryContextId="_E1OekOcqEeiisoT47hPqSg" type="id_String" value=""/>
+    <contextParameter comment="" name="RepFichierLog" prompt="RepFichierLog?" promptNeeded="false" repositoryContextId="_hMR34OcjEeiisoT47hPqSg" type="id_String" value="&quot;d:/prd/pe010/log.w&quot;"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -171,41 +146,6 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_1"/>
   </node>
-  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_2"/>
-    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
-    <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
-    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="EcritureFichierLog"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_91kLsG-yEeibp7bCS_OOvQ"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TEXT" name="CONTEXT_NAME" show="false" value="Default"/>
-    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
-    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
-    <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="job"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="sequence"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;CPALS003&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="message"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;--- Début CPALS003 --&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="project"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;LOGYS&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="returnCode"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="0"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
-    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" show="false" value="true"/>
-    <elementParameter field="TEXT" name="LABEL" value="EcritureFichierLog"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tRunJob_2"/>
-  </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tWarn_1"/>
     <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
@@ -255,144 +195,33 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_1"/>
   </node>
-  <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogCatcher_1"/>
-    <elementParameter field="CHECK" name="CATCH_JAVA_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_TDIE" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_TWARN" value="true"/>
-    <elementParameter field="CHECK" name="CATCH_TACTIONFAILURE" value="true"/>
+  <node componentName="gestionLog" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="160" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="gestionLog_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="LABEL" value="gestionLog"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogCatcher_1">
-      <column key="false" length="0" name="moment" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column key="false" length="20" name="pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="root_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="father_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="50" name="project" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="255" name="job" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="50" name="context" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="3" name="priority" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column key="false" length="255" name="type" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="255" name="origin" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="255" name="message" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="3" name="code" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-    </metadata>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_1-H2oHLZEeiXgJ6-AxyKlA-tMap_1-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+  <node componentName="chargementParametre" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="chargementParametre_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="LABEL" value="chargementParametre"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="row3">
-      <column comment="" key="false" length="20" name="moment" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="row3" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row2.moment " name="moment" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="StringHandling.UPCASE(row2.project) " name="project" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="StringHandling.UPCASE(row2.job )" name="sequence" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;&quot;" name="job" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row2.code " name="code" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row2.message " name="message" nullable="true" type="id_String"/>
-      </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="moment" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="pid" nullable="true" type="id_String"/>
-        <mapperTableEntries name="root_pid" nullable="true" type="id_String"/>
-        <mapperTableEntries name="father_pid" nullable="true" type="id_String"/>
-        <mapperTableEntries name="project" nullable="true" type="id_String"/>
-        <mapperTableEntries name="job" nullable="true" type="id_String"/>
-        <mapperTableEntries name="context" nullable="true" type="id_String"/>
-        <mapperTableEntries name="priority" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="type" nullable="true" type="id_String"/>
-        <mapperTableEntries name="origin" nullable="true" type="id_String"/>
-        <mapperTableEntries name="message" nullable="true" type="id_String"/>
-        <mapperTableEntries name="code" nullable="true" type="id_Integer"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tFileOutputPositional" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputPositional_1"/>
-    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
-    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
-    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.RepFichierLog"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_YfoQAG-yEeibp7bCS_OOvQ - metadata"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="CHECK" name="APPEND" value="true"/>
-    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
-    <elementParameter field="CHECK" name="COMPRESS" show="false" value="false"/>
-    <elementParameter field="TABLE" name="FORMATS">
-      <elementValue elementRef="SCHEMA_COLUMN" value="moment"/>
-      <elementValue elementRef="SIZE" value="20"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="KEEP" value="'A'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="project"/>
-      <elementValue elementRef="SIZE" value="10"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="KEEP" value="'A'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sequence"/>
-      <elementValue elementRef="SIZE" value="20"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="KEEP" value="'A'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="job"/>
-      <elementValue elementRef="SIZE" value="20"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="KEEP" value="'A'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
-      <elementValue elementRef="SIZE" value="3"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="KEEP" value="'A'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="message"/>
-      <elementValue elementRef="SIZE" value="255"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="KEEP" value="'A'"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="USE_BYTE" value="false"/>
-    <elementParameter field="CHECK" name="CREATE" value="false"/>
-    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
-    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
-    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="log.w"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tFileOutputPositional_1">
-      <column comment="" key="false" length="20" name="moment" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
   </node>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRunJob_1" target="tWarn_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) == 0"/>
@@ -402,33 +231,14 @@
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) != 0"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tRunJob_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
-  </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSendMail_1" offsetLabelX="0" offsetLabelY="0" source="tSendMail_1" target="tDie_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tLogCatcher_1" offsetLabelX="0" offsetLabelY="0" source="tLogCatcher_1" target="tMap_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
-  </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="row3" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFileOutputPositional_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  <connection connectorName="TRIGGER_OUTPUT_1" label="OnSubjobOk (TRIGGER_OUTPUT_1)" lineStyle="1" metaname="chargementParametre_1" offsetLabelX="0" offsetLabelY="0" source="chargementParametre_1" target="tRunJob_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_2"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
@@ -448,17 +258,22 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogCatcher_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="gestionLog_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cf7bd382-55fe-4acb-944b-2b4504f34dda"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Gyzy8h3ZfehuKDYY4WlTnRmD6pmmxPw0K89Xt4Q+16xOu97eZordApuAexFbwBp1s7PhrzIuMxXM
-N1i70eXEaA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e693923f-0a39-447f-8140-e525c28ce168"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hebGDXCpF4Jw8Q8XHIl6bLB/3Zs0Gmx5DOabk9cAoCFYwJjz6htscnDnguFWNCQJL1MIJ2k2TPTD
-LyHbsM//fA==</DigestValue></Reference></SignedInfo><SignatureValue>FaiM2jAFqv6MQgqtKHakh1Ddfyg+ftyqhHlqI9RmAc5Xef8+p/Uc7eENwgJj/z2g4L8zcFnUDE2x
-M/lNgCRtgix9vML+a0PRa+hvlLHqhPdOhpQvl3fvhQ0BbJi5IqbwbTYlNxopuewOFe13QdE4C7GB
-zFmm9EcAKOMTSG41GLRweeoZXbgYj4hrLtkkqUO+8GAdXUdp0jWE1Bz1MzO//fHThw/4uvQ+pAeO
-2EmUBqwkjY0ASxAl+0xBpfz5ZCVaLFtNpZ2pAr+gNCRvl0scORdCN+gmMG9kpYzOVuygVyUjxiPL
-nlVDe/2Nq6HXqcCqVNTuG3k2vD2siW92gcpKNA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="chargementParametre_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_27460c5f-b899-4c18-be95-69747b1e6b5c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pU83VxDFjQCZQR1b5On6kfZXHw5JcqsAVb+s4ANlQWa6vajH61qAJxUYH8GDTxeuokgptnAPQ4lW
+jJX8a/kgFQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7ee605c1-425e-41ac-9610-d63ac9811355"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>554iwrNaXjgL/XOLNKSlQ+EEkC7yRxkh4FiGYABK0ty0u8cJgZ6xQlGfNe2nOs9yNNJqnI1nb7P7
+1ZkwVoqlpg==</DigestValue></Reference></SignedInfo><SignatureValue>0VAwJ331Lcm105M8RjUpMd5hNsQ7rwIK1yzh0yfqd2JP6xcmwR0zLnszq6ClVy0BLZphLZXsyCxA
+7oSx1Q3Zk6AQddxJlKirdtXqJdlrLtHvbWzGsXJyds5iZLcpeATNOsarX+5n5mcEwdhtFYncrrFz
+RYDlMXp3o3/l7G6ATk8MM1yJbxmq6yfP3uUaMHb2kgzg6L/DEuN0tXIxe9wYu7T/yXnhQVa21ZJD
+H60Xd/y9qznpuDI9lGrkgPi9k5dtr8Sh7aTGKGMSCZQCpukT5GNxTmVVoqH9mTCBtbtquSyO+zMu
+0ssaA9hX7cf/HQ/4nPE5adY0NwyaJVWEwiKzjQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -482,4 +297,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e693923f-0a39-447f-8140-e525c28ce168" Target="#_cf7bd382-55fe-4acb-944b-2b4504f34dda"><Timestamp>2018-11-14 07:02:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7ee605c1-425e-41ac-9610-d63ac9811355" Target="#_27460c5f-b899-4c18-be95-69747b1e6b5c"><Timestamp>2018-11-14 07:27:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
