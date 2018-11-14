@@ -22,27 +22,28 @@
     <contextParameter comment="" name="fichierParam" prompt="FILENAME?" promptNeeded="false" repositoryContextId="_HfRYEOcsEeiisoT47hPqSg" type="id_String" value="D:/prd/DEV.properties"/>
     <contextParameter comment="" name="nomSequence" prompt="nomSequence?" promptNeeded="false" repositoryContextId="_E1OekOcqEeiisoT47hPqSg" type="id_String" value=""/>
   </context>
-  <context confirmationNeeded="false" name="Prod">
-    <contextParameter comment="" name="MailDestError" prompt="MailDestError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;sfreexploitanolc@dmc.fr&quot;"/>
-    <contextParameter comment="" name="MailEmetError" prompt="MailEmetError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;mpasquiers@dmc.fr&quot;"/>
-    <contextParameter comment="" name="SmtpPort" prompt="SmtpPort?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="25"/>
-    <contextParameter comment="" name="SmtpServeur" prompt="SmtpServeur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;smtp.newel.net&quot;"/>
+  <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="LogysFtpHost" prompt="LogysFtpHost?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;SRVLOGYS&quot;"/>
     <contextParameter comment="" name="LogysFtpPwd" prompt="LogysFtpPwd?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;PTF01EP&quot;"/>
-    <contextParameter comment="" name="LogysFtpRepDescente" prompt="LogysFtpRepDescente?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/descente&quot;"/>
-    <contextParameter comment="" name="LogysFtpRepRemonte" prompt="LogysFtpRepRemonte?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/remonte&quot;"/>
-    <contextParameter comment="" name="LogysFtpUser" prompt="LogysFtpUser?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;DMCFR\PE10FTP&quot;"/>
-    <contextParameter comment="Répertoire fichier initialisation" name="RepDataIni" prompt="RepDataIni?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/datainiprd&quot;"/>
-    <contextParameter comment="Répertoire fichier en entrée" name="RepIn" prompt="RepIn?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/inprd&quot;"/>
+    <contextParameter comment="" name="LogysFtpRepDescente" prompt="LogysFtpRepDescente?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/InterfaceDev/descente&quot;"/>
+    <contextParameter comment="" name="LogysFtpRepRemonte" prompt="LogysFtpRepRemonte?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;/InterfaceDev//Remonte&quot;"/>
+    <contextParameter comment="" name="LogysFtpUser" prompt="LogysFtpUser?" promptNeeded="false" repositoryContextId="_IJREAGf7Eei7nvte-9yivQ" type="id_String" value="&quot;DMCFR/PE10FTP&quot;"/>
+    <contextParameter comment="Répertoire fichier initialisation" name="RepDataIni" prompt="RepDataIni?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/datainidev&quot;"/>
+    <contextParameter comment="Répertoire fichier en entrée" name="RepIn" prompt="RepIn?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/indev&quot;"/>
     <contextParameter comment="" name="RepLogys" prompt="RepLogys?" promptNeeded="false" type="id_String" value="d:/donnees/logys&quot;"/>
-    <contextParameter comment="Répertoire fichier en sortie " name="RepOut" prompt="RepOut?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;/donnees/outprd&quot;"/>
-    <contextParameter comment="R2pertoire fichier permanent" name="RepPerm" prompt="RepPerm?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/permprd&quot;"/>
-    <contextParameter comment="Répertoire fichier temporaire" name="RepTemp" prompt="RepTemp?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/tempprd&quot;"/>
-    <contextParameter comment="Répertoire versionning fichier permanent" name="RepVersion" prompt="RepVersion?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/versionprd&quot;"/>
-    <contextParameter comment="" name="RepFichierLog" prompt="RepFichierLog?" promptNeeded="false" type="id_String" value="&quot;d:/prd/pe010/log.w&quot;"/>
-    <contextParameter comment="" name="RepPrd" prompt="RepPrd?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/pe010&quot;"/>
-    <contextParameter comment="" name="RepPrdLogys" prompt="RepPrdLogys?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/pe010/Logys&quot;"/>
+    <contextParameter comment="Répertoire fichier en sortie " name="RepOut" prompt="RepOut?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;/donnees/outdev&quot;"/>
+    <contextParameter comment="R2pertoire fichier permanent" name="RepPerm" prompt="RepPerm?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/permdev&quot;"/>
+    <contextParameter comment="Répertoire fichier temporaire" name="RepTemp" prompt="RepTemp?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/tempdev&quot;"/>
+    <contextParameter comment="Répertoire versionning fichier permanent" name="RepVersion" prompt="RepVersion?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_String" value="&quot;d:/donnees/versiondev&quot;"/>
+    <contextParameter comment="" name="RepFichierLog" prompt="RepFichierLog?" promptNeeded="false" type="id_String" value="&quot;d:/prd/de010/log.w&quot;"/>
+    <contextParameter comment="" name="RepPrd" prompt="RepPrd?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/de010&quot;"/>
+    <contextParameter comment="" name="RepPrdLogys" prompt="RepPrdLogys?" promptNeeded="false" repositoryContextId="_e7mBwGf6Eei7nvte-9yivQ" type="id_String" value="&quot;d:/prd/de010/Logys&quot;"/>
+    <contextParameter comment="" name="fichierParam" prompt="FILENAME?" promptNeeded="false" repositoryContextId="_HfRYEOcsEeiisoT47hPqSg" type="id_String" value="D:/prd/DEV.properties"/>
     <contextParameter comment="" name="nomSequence" prompt="nomSequence?" promptNeeded="false" repositoryContextId="_E1OekOcqEeiisoT47hPqSg" type="id_String" value=""/>
+    <contextParameter comment="" name="SmtpServeur" prompt="SmtpServeur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;smtp.newel.net&quot;"/>
+    <contextParameter comment="" name="SmtpPort" prompt="SmtpPort?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="25"/>
+    <contextParameter comment="" name="MailEmetError" prompt="MailEmetError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;vmdmcfic01@dmc.fr&quot;"/>
+    <contextParameter comment="" name="MailDestError" prompt="MailDestError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;sfreexploitanolc@dmc.fr&quot;"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -236,13 +237,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;255;128"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_06a86b80-e784-484d-a050-8e0e8da3f99d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZqhN1j/SWCGIXSHTDAck65liJ4VqemzfyGq+SiWiwVaWKNu+iyOCPLi0GJsRsjc0IxaCKJpdA6v7
-WAw7Z1l77A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f87003e2-ceea-46f0-82c4-273e3cb316d7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nKUybONHrZmrtpM7Zc1V3jdxEy1++rdJ3EXf8SkuIARThtq3v8IdlyW9F4FTbrci6NaF4QlFk8/E
-woJCs7D5xQ==</DigestValue></Reference></SignedInfo><SignatureValue>IvN7+McG57FvySDkn8xeTx73A53r0PyNN6l2ZmI4HS2qZYRjB78Rudw/Ggo2SB6bYqw01entNEWA
-WfsKntAzTC4iShZYMvixe7E54E7Lqd9r3Y72XYqTrp5Yt2+/qqF0snZndQdhEoQVOZfShR0CLiDC
-GHds9Cu4qCwoI2Xv4wAAugwhDA9Vd8eY1KXaLyE9UAcGXgCRXcOoAgoMnNWfGcpBMrnowHUhEgYQ
-Tup3vbvJd1jN0xs5RMUviLquLxfFoANwhPDNTVWRTb/dFikMMrXWEt+Kb7cPlvPJ3BnnrG/BmwKO
-MDt//zh7euVxMRCOyGeFdm9uSyXLZ3RweGUmfg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_211e8630-29cd-4fe4-91ca-b913590b1ae8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rNe+Tbdiga9D0T2rPHmGoAInFZmcEgX9h+h5EEvDznVX24HeOEgVgEXfpFn6hbRNAR13pM+YwWc2
+wuuHP9DWug==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5c17c9e5-5f67-4b8b-bdf4-6f9e9f9c457f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PZ/bW61EIA09buNSjiWIK6Nht9dKI3leQEZIpMe+V/uHo3BfmJ+3coE/4hNFgwrGGVxoC2f2WhU2
+KXWF04ayrA==</DigestValue></Reference></SignedInfo><SignatureValue>OfpliVDzBvXFAGpacK8iT5aZy8Cs8Caqmt/pd40AWcVsU8jdF0kwUJ7BofblW8NV8vvFik1G6T42
+ICFlQqwbllkO3oPD5zKkqa5loYxWjDHbVQrOdjiurCFObo3INtOeVhSd+sDwEZbnO9YFaMoy2H4c
+ATST0FIPh2oTm/h0PcDD/JasMnjVslyWp61lEaGfdIDTgBqDTPY5xOqMllwHG5QcIN+mdveO8rkn
+gn++mNsqoH4jxEnhAp9TiI4J5jNloxYPl2gLVfji9GlanhuMhQ1cK0aA50m0YqiLBIOxSeYOQatk
+hxUKgAFn6nX9c2kGPjbRPgSjteN83z9ahfvn6Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -266,4 +267,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f87003e2-ceea-46f0-82c4-273e3cb316d7" Target="#_06a86b80-e784-484d-a050-8e0e8da3f99d"><Timestamp>2018-11-14 10:35:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5c17c9e5-5f67-4b8b-bdf4-6f9e9f9c457f" Target="#_211e8630-29cd-4fe4-91ca-b913590b1ae8"><Timestamp>2018-11-14 13:26:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
