@@ -45,6 +45,21 @@ public class DMCUtils {
         minute = (duration % 3600000) / 60000;
         seconde = ((duration % 3600000)%60000) / 1000 ;
         
+        String mHeure;
+        String mMinute;
+        String mSeconde;
+        
+        if (heure == 0 )  {
+        	mHeure = "";
+        } else if (heure == 1 ) {
+        	mHeure = heure + " heure ";
+        } else {
+        	mHeure = heure + " heures ";
+        }
+        
+        
+        
+        
         return heure + " heure " + minute  +" minute "+  seconde + " seconde";
         
         
