@@ -73,7 +73,7 @@ public class DMCUtils {
         	mSeconde = seconde + " secondes ";
         }
         
-        return heure + " heure " + minute  +" minute "+  seconde + " seconde";
+        return mHeure + mMinute + mSeconde;
         
         
     }
