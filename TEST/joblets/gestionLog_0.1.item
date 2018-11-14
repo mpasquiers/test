@@ -127,7 +127,7 @@
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
-        <uiProperties shellMaximized="true"/>
+        <uiProperties/>
         <varTables name="Var" sizeState="INTERMEDIATE"/>
         <outputTables name="stats" sizeState="INTERMEDIATE">
           <mapperTableEntries expression="row4.moment" name="moment" nullable="true" type="id_Date"/>
@@ -266,7 +266,7 @@
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
-        <uiProperties shellMaximized="true"/>
+        <uiProperties/>
         <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
         <outputTables name="metrics" sizeState="INTERMEDIATE">
           <mapperTableEntries expression="row1.moment" name="moment" nullable="true" type="id_Date"/>
@@ -407,7 +407,7 @@
         <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
-        <uiProperties shellMaximized="true"/>
+        <uiProperties/>
         <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
         <outputTables name="logs" sizeState="INTERMEDIATE">
           <mapperTableEntries expression="row2.moment" name="moment" nullable="true" type="id_Date"/>
@@ -502,7 +502,6 @@
     </node>
     <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="256">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogCatcher_1"/>
-      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
       <elementParameter field="CHECK" name="CATCH_JAVA_EXCEPTION" value="true"/>
       <elementParameter field="CHECK" name="CATCH_TDIE" value="true"/>
       <elementParameter field="CHECK" name="CATCH_TWARN" value="true"/>
@@ -525,7 +524,6 @@
     </node>
     <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="256">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
-      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
       <elementParameter field="EXTERNAL" name="MAP" value=""/>
       <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
       <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -575,7 +573,6 @@
     </node>
     <node componentName="tFileOutputPositional" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="256">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputPositional_4"/>
-      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
       <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
       <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
       <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -643,7 +640,6 @@
     </node>
     <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="256">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSetGlobalVar_1"/>
-      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
       <elementParameter field="TABLE" name="VARIABLES">
         <elementValue elementRef="KEY" value="&quot;jobName&quot;"/>
         <elementValue elementRef="VALUE" value="row5.job"/>
@@ -660,7 +656,6 @@
     </node>
     <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="384">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
-      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
       <elementParameter field="TEXT" name="TO" value="&quot;receiver@example.com&quot;"/>
       <elementParameter field="TEXT" name="FROM" value="&quot;send@example.com&quot;"/>
       <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
@@ -726,22 +721,18 @@
     </connection>
     <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tLogCatcher_1" offsetLabelX="0" offsetLabelY="0" source="tLogCatcher_1" target="tMap_4">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
     </connection>
     <connection connectorName="FLOW" label="copyOflogs" lineStyle="0" metaname="copyOflogs" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tFileOutputPositional_4">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOflogs"/>
+    </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputPositional_4" offsetLabelX="0" offsetLabelY="0" source="tFileOutputPositional_4" target="tSendMail_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
     </connection>
     <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tFileOutputPositional_4" offsetLabelX="0" offsetLabelY="0" source="tFileOutputPositional_4" target="tSetGlobalVar_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
-    </connection>
-    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputPositional_4" offsetLabelX="0" offsetLabelY="0" source="tFileOutputPositional_4" target="tSendMail_1">
-      <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
     </connection>
     <subjob>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tStatCatcher_1"/>
@@ -775,13 +766,13 @@
     </subjob>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e71c5beb-a5dc-4703-a890-7da6e868d578"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>q9BQ8ag82BoU89Y5WiDTERbhvzwqTCWtLXHuOtCFZ8tVXNUfPYQFpNGl0Q1Hl0Uhn8yf9aCZ287O
-PKELIo56uQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d343ff09-0621-4d54-b896-15ed1b8d5ac6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Yvkq9RhSZ2RDQv1zo0glVPOdC/5crsmTiY9+UdDPNepR6P26294Ne6uZNB1D26ANpP2jlsLrVIuC
-8st9//dBJw==</DigestValue></Reference></SignedInfo><SignatureValue>eJ4gFwzR/3XLNvUbeLV9OAf632+Wi/ht7zCE1/XAysYKDbsnabRzSDtmwP/UMjgQzCmTbgoqcgkH
-8SF6sSuEG5+6FjT1CIiji3eEW2mbDcwU1q7j+rT7jTPs6dxRaVwnu93kiRLreZVZO+sMjzszqH2A
-M2g8fB9c6DJtDtBiwvFNnaswayJR/oPjWDTGaAGUI8pR6u9KkCEVOjbk0vs/RAQtk01O8HE8fJXO
-SmYmFI6augcMqniXgfzqBTvuU5bIb9xhuRXCAs4oy1rU3fA3WHNfgBO/RLUG40xCcHhkvSfqeRah
-Qa37bYwJjEpEuEjf6VIFW6j9yqx2Z3KkccKIvQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_60cc0401-f1c7-4da1-9653-d4d6ae83c5f0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>N7q94p7MGgUCQqPaibsvPP2PodJXXLOvVFm7EepMrW2URfbd6AJ69vmb6Eqn29NXiCEE9gjp9kdE
+ywLN+qK1Og==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d54b567c-769d-4e45-8645-e95ab5b6bfa7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SXcteiwjgVNIPS7jxHKxhMi7RodOTwe0J7+0NDWQZPF9V3UKaypBpoonPEKg6FSUruvC7maBeS8M
+jA8SaYSxsQ==</DigestValue></Reference></SignedInfo><SignatureValue>YQGGia68iqbweUHM04rKHnCJiIMPvI2zekPrIL6sW+1wu83E7duxM5HKso7ElJn30PmJmw+xj/cg
+RpLC8yHzUOH2VEqpIBEXcJhmnSJEQ83uMQvBJSpEPDO5xdA5Iz48looTp4jeUYnQ+87Xkl5sSIlo
+m123PBrJGKRB2aMtkdfQu4ocu84Xv18JAOnCBmRNcoqDAz0v9ye05HkADnNipWvTzpQWQJjAD/Xq
+vQXPvlo9xG/ehAu+/VDJZLagvIAVYneMkmJk0NMVtbYOjXJFqbwhOStlDkRcR18pTajN/t24ltiT
+PiK4MdTw7ELP7l5TUm4ddY0pNWMSmgyRT9hc+g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -805,4 +796,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d343ff09-0621-4d54-b896-15ed1b8d5ac6" Target="#_e71c5beb-a5dc-4703-a890-7da6e868d578"><Timestamp>2018-11-13 10:52:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d54b567c-769d-4e45-8645-e95ab5b6bfa7" Target="#_60cc0401-f1c7-4da1-9653-d4d6ae83c5f0"><Timestamp>2018-11-14 07:37:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
