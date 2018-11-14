@@ -26,7 +26,7 @@ public class DMCUtils {
      * 
      * {talendTypes} String
      * 
-     * {Category} DMCUtilsd
+     * {Category} DMCUtils
      * 
      * {param} Long("duration") input: The duration in milli seconde.
      * 
