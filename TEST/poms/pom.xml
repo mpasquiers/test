@@ -39,6 +39,7 @@
     <module>jobs/process/test/demo_tjava_0.1</module>
     <module>jobs/process/test/demojob_0.1</module>
     <module>jobs/process/test/demoump_0.1</module>
+    <module>jobs/process/test/test_routientemps_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TEST</talend.project.name>
