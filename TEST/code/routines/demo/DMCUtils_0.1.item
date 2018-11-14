@@ -30,7 +30,7 @@ public class DMCUtils {
      * 
      * {param} Long("duration") input: The duration in milli seconde.
      * 
-     * {example} timeToString(72056) #  !.
+     * {example} timeToString(72056) #  
      */
     public static String timeToString(Long duration) {
         if (duration == null) {
