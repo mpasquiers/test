@@ -8,22 +8,22 @@
     <contextParameter comment="" name="LogysCpre" prompt="LogysCpre?" promptNeeded="false" type="id_String" value="&quot;CPRE&quot;" xmi:id="_8nBhVucZEeiisoT47hPqSg"/>
     <contextParameter comment="" name="LogysCpal" prompt="LogysCpal?" promptNeeded="false" type="id_String" value="&quot;CPAL&quot;" xmi:id="_8nBhV-cZEeiisoT47hPqSg"/>
   </talendfile:ContextType>
-  <talendfile:ContextType confirmationNeeded="false" name="prod" xmi:id="_8nBhWOcZEeiisoT47hPqSg">
-    <contextParameter comment="" name="LogysFtpRepDescente" prompt="LogysFtpRepDescente?" promptNeeded="false" type="id_String" value="&quot;/descente&quot;" xmi:id="_8nBhWecZEeiisoT47hPqSg"/>
-    <contextParameter comment="" name="LogysFtpRepRemonte" prompt="LogysFtpRepRemonte?" promptNeeded="false" type="id_String" value="&quot;/remonte&quot;" xmi:id="_8nBhWucZEeiisoT47hPqSg"/>
-    <contextParameter comment="" name="LogysFtpHost" prompt="LogysFtpHost?" promptNeeded="false" type="id_String" value="&quot;SRVLOGYS&quot;" xmi:id="_8nBhW-cZEeiisoT47hPqSg"/>
-    <contextParameter comment="" name="LogysFtpUser" prompt="LogysFtpUser?" promptNeeded="false" type="id_String" value="&quot;DMCFR\PE10FTP&quot;" xmi:id="_8nBhXOcZEeiisoT47hPqSg"/>
-    <contextParameter comment="" name="LogysFtpPwd" prompt="LogysFtpPwd?" promptNeeded="false" type="id_String" value="&quot;PTF01EP&quot;" xmi:id="_8nBhXecZEeiisoT47hPqSg"/>
-    <contextParameter comment="" name="LogysCpre" prompt="LogysCpre?" promptNeeded="false" type="id_String" value="&quot;MAXE&quot;" xmi:id="_8nBhXucZEeiisoT47hPqSg"/>
-    <contextParameter comment="" name="LogysCpal" prompt="LogysCpal?" promptNeeded="false" type="id_String" value="&quot;MCPAL&quot;" xmi:id="_8nBhX-cZEeiisoT47hPqSg"/>
+  <talendfile:ContextType confirmationNeeded="false" name="PROD" xmi:id="_ELpBEOgREeiMtq6iVbzstg">
+    <contextParameter comment="" name="LogysFtpRepDescente" prompt="LogysFtpRepDescente?" promptNeeded="false" type="id_String" value="&quot;/InterfaceDev/descente&quot;" xmi:id="_ELpBEegREeiMtq6iVbzstg"/>
+    <contextParameter comment="" name="LogysFtpRepRemonte" prompt="LogysFtpRepRemonte?" promptNeeded="false" type="id_String" value="&quot;/InterfaceDev//Remonte&quot;" xmi:id="_ELpBEugREeiMtq6iVbzstg"/>
+    <contextParameter comment="" name="LogysFtpHost" prompt="LogysFtpHost?" promptNeeded="false" type="id_String" value="&quot;SRVLOGYS&quot;" xmi:id="_ELpBE-gREeiMtq6iVbzstg"/>
+    <contextParameter comment="" name="LogysFtpUser" prompt="LogysFtpUser?" promptNeeded="false" type="id_String" value="&quot;DMCFR/PE10FTP&quot;" xmi:id="_ELpBFOgREeiMtq6iVbzstg"/>
+    <contextParameter comment="" name="LogysFtpPwd" prompt="LogysFtpPwd?" promptNeeded="false" type="id_String" value="&quot;PTF01EP&quot;" xmi:id="_ELpBFegREeiMtq6iVbzstg"/>
+    <contextParameter comment="" name="LogysCpre" prompt="LogysCpre?" promptNeeded="false" type="id_String" value="&quot;CPRE&quot;" xmi:id="_ELpBFugREeiMtq6iVbzstg"/>
+    <contextParameter comment="" name="LogysCpal" prompt="LogysCpal?" promptNeeded="false" type="id_String" value="&quot;CPAL&quot;" xmi:id="_ELpBF-gREeiMtq6iVbzstg"/>
   </talendfile:ContextType>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d9a17efd-f07b-45bb-a68a-d83b2998a04d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>f9sY9Ng9Ju7Fa4gFNj0k1veaNVPPgnov16slpInZj8uQjix+o7krg7peiVG4YL2Af/X8k9A8SlIm
-VNIT3RcZbw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c3e0524e-272f-4f32-8ff1-5841740a2002"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kHvWW1cUY1R+QMw5zEbDLtbFka3EuvmK1DQm96ffwtxds2kXL5xtZT+6pH/zLx/7isiKGUO47QQ5
-f6wU8TWdOQ==</DigestValue></Reference></SignedInfo><SignatureValue>Wv/KKHGLHinlNwcHfZXk0D2PJwVGj4p26s+ZFtdBontKZtw1TEOzQ2x9oMO+i3zdsoZm2lusvnYN
-6oZIE7ilqBAcJpcK/a+/SUZvAUAY3Z8Ia8016lE6+u5/ELru3v5kjpoykECOXdIQFvytMgR6QxKz
-V6BAe/rlMmvi6ZnCLDpIani4Lp1PQchnPLo6hf4gDPkhcoOFrY7UDFDdJZSyt+nYaLNmYzz9Jj+8
-c0S7WNHdd6SzeD5DkUbONY72Yiyqxd/mx+5GaU56qg8bfEMdKD3si2Ku7VguPQG7/VI652gcURDn
-8tpXVdalidTp1X1ozLvtjlEere8KuI08cS5AvQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_29e3b3fb-4f10-47c6-87dc-a5eaceda6b60"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Fr/RCFa8gu7yyYfaIHOalTyJvH6PuU/MZ5l5XVA7tTcI8Gfc1r3SG24o9aOPpY+L7aRVI9lZdr5x
+yKKDmIFUIQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4e3378f9-2e25-4f38-b18f-fc78b5d0e686"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UNterPPkrGAma6/yzuHus/i0lPcb4ocYCblwBd4mWkiz9z7pYfgwxZa65BEw04L3h6nf6asPp0XC
+lyILD1v0Bg==</DigestValue></Reference></SignedInfo><SignatureValue>tVmzkhZeg2ZheBQA4dOs7tBdaBClx8t3+2mPbRC5W2fHQusRYXXt7HtdU0M34/KGLMHttdCQrfBt
+TsHYrNQYZ//vnhm9l+kYXZfBjOLwkjmlu7w3DMCrDvdNkP+wZI4gVTYoo+n0Oh9iwB9HvEKSdZzH
+QYWs7JpzLeU1w8ekdGXjGtyVAYawdr3TBxn8MsCvJPj25GGHbdlQ2J17X+UkeIKgb1ThrblumQ8N
+cgZc7WtTnB20o+XhmbOLG2+lz421WWqkImBi67Y/5T0Zs3Bh7ggxuL7lSkEy5QT83vyyHJEcfIQV
+L9GBavvoAaEEx3m+hM38C/Rz+Oyu82yuuvRctw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -47,4 +47,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c3e0524e-272f-4f32-8ff1-5841740a2002" Target="#_d9a17efd-f07b-45bb-a68a-d83b2998a04d"><Timestamp>2018-11-13 17:02:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4e3378f9-2e25-4f38-b18f-fc78b5d0e686" Target="#_29e3b3fb-4f10-47c6-87dc-a5eaceda6b60"><Timestamp>2018-11-14 13:27:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
