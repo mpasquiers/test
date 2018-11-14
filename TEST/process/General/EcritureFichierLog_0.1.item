@@ -233,11 +233,6 @@
       <elementValue elementRef="PADDING_CHAR" value="' '"/>
       <elementValue elementRef="ALIGN" value="'L'"/>
       <elementValue elementRef="KEEP" value="'A'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
-      <elementValue elementRef="SIZE" value="3"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="KEEP" value="'A'"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="message"/>
       <elementValue elementRef="SIZE" value="255"/>
       <elementValue elementRef="PADDING_CHAR" value="' '"/>
@@ -262,7 +257,6 @@
       <column comment="" key="false" length="10" name="project" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="20" name="sequence" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="20" name="job" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="3" name="code" nullable="true" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="message" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -326,13 +320,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1334cbb9-a56c-46ef-8167-1e8a42344881"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KZIzjMCAINr/V026pgTL0gx/6LdpSe63qN49YELeDOqo5AxjHZinGI5uPXQzh2aY8gTemFysC1kT
-uXbkdeHLAA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_71dfe3a1-3b8f-4f85-870d-76cfeaaf90de"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8XaxFSNop3CylwqYDlqAmyOIHWEAfcfjMWgHR9WimssdFs1WoEA6Zsi/dN6U/HnNEl7VNg1Bsu5U
-lo4FU/aHdg==</DigestValue></Reference></SignedInfo><SignatureValue>zyA/5gDwvRXDW8C1hJ29XVEhS405KHTjnHW/Tb9siE2AOUDtIaRb+lTy0allrR728313Ifu821Se
-JrHrAzWAR1xsDih2/01hTjTQ1yXFsfN0BVRBC1/8/YV/ypzItnGOzVUQYp5kY8uqs0YOkJKY5tEj
-Wa6beOMShj6c/jgrr3yMf2mwxfS4j7DG7sBdCHFdbkPwA0gAo3S6bTmFTikA/zhr6S8jN9I5SlFX
-BxdFoSDlkV9Q7eqlUzOl+Y4kUcXL8NCYk43vACbgGYrcAHFFfesO+MSmQZM2TpZIMu3giUgNfTgV
-Fer1hwD+XyLHkYSradt+JVr90iANALFfTzuJdw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_739bfcc0-f33b-4c0b-a86f-eec1aaa8587f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MA7PQ4CwRKKVMFfrLto5EvF81h4e48WR2AYUl20YNcAalc1bK89EdDq44HkqI4iipV9uIljI8RV4
+vyfpAQ0Umg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5af1d0bd-cbb4-4c97-988c-cd79d7bc1a3f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bSLuf4w+Pn5ZS22SoqOQLbnvSP77DC7TOhCGnYDvxfA0gDndIbDXXFKRLaDw3g+HvGAlqjNexGmK
+EmzGRKAYFw==</DigestValue></Reference></SignedInfo><SignatureValue>Pk+MbhnmKOCfs9aOWCQ7UVOJs4z9Zw16nK4i36WSSEsAwO4KJCLujsCwAxPus56A8hDmL13TXgNX
+wO42QlgbULTweSlCam1jvHl34lV16eChIspPfRCfo+wKpLtCk+yRB2ZPfVX05gJ+GTWeHpCiAMfN
+o/EkaUVu8mMQMjTPjxfniUeVjzTnJAEJAz1tWZbjOlBrBBzi7+TqTAgdc5mOZkTLZRgUPIfctUsU
+dGZbot02FI9sNpHKCjN8mF+pUc2+OYJBmBu+m+WcgpjTKVVLBPYL7ShnNO9+Jdk3vLjdWNAK3CeC
+ZMELwIun3WwNHmM2ZVp9ZrUyNjRYxE4hS0Ggtw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -356,4 +350,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_71dfe3a1-3b8f-4f85-870d-76cfeaaf90de" Target="#_1334cbb9-a56c-46ef-8167-1e8a42344881"><Timestamp>2018-11-13 10:47:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5af1d0bd-cbb4-4c97-988c-cd79d7bc1a3f" Target="#_739bfcc0-f33b-4c0b-a86f-eec1aaa8587f"><Timestamp>2018-11-14 08:28:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
