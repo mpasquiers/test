@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:version="2.0">
-  <talendfile:ContextType confirmationNeeded="false" name="Default" xmi:id="_8psa0OcZEeiisoT47hPqSg">
-    <contextParameter comment="Répertoire fichier temporaire" name="RepTemp" prompt="RepTemp?" promptNeeded="false" type="id_String" value="&quot;d:/donnees/tempdev&quot;" xmi:id="_8psa0ecZEeiisoT47hPqSg"/>
-    <contextParameter comment="R2pertoire fichier permanent" name="RepPerm" prompt="RepPerm?" promptNeeded="false" type="id_String" value="&quot;d:/donnees/permdev&quot;" xmi:id="_8psa0ucZEeiisoT47hPqSg"/>
-    <contextParameter comment="Répertoire fichier en entrée" name="RepIn" prompt="RepIn?" promptNeeded="false" type="id_String" value="&quot;d:/donnees/indev&quot;" xmi:id="_8psa0-cZEeiisoT47hPqSg"/>
-    <contextParameter comment="Répertoire fichier en sortie " name="RepOut" prompt="RepOut?" promptNeeded="false" type="id_String" value="&quot;/donnees/outdev&quot;" xmi:id="_8psa1OcZEeiisoT47hPqSg"/>
-    <contextParameter comment="Répertoire fichier initialisation" name="RepDataIni" prompt="RepDataIni?" promptNeeded="false" type="id_String" value="&quot;d:/donnees/datainidev&quot;" xmi:id="_8psa1ecZEeiisoT47hPqSg"/>
-    <contextParameter comment="Répertoire versionning fichier permanent" name="RepVersion" prompt="RepVersion?" promptNeeded="false" type="id_String" value="&quot;d:/donnees/versiondev&quot;" xmi:id="_8psa1ucZEeiisoT47hPqSg"/>
-  </talendfile:ContextType>
-  <talendfile:ContextType confirmationNeeded="false" name="PROD" xmi:id="_PLcWgOgREeiMtq6iVbzstg">
-    <contextParameter comment="Répertoire fichier temporaire" name="RepTemp" prompt="RepTemp?" promptNeeded="false" type="id_String" value="&quot;d:/donnees/tempdev&quot;" xmi:id="_PLcWgegREeiMtq6iVbzstg"/>
-    <contextParameter comment="R2pertoire fichier permanent" name="RepPerm" prompt="RepPerm?" promptNeeded="false" type="id_String" value="&quot;d:/donnees/permdev&quot;" xmi:id="_PLcWgugREeiMtq6iVbzstg"/>
-    <contextParameter comment="Répertoire fichier en entrée" name="RepIn" prompt="RepIn?" promptNeeded="false" type="id_String" value="&quot;d:/donnees/indev&quot;" xmi:id="_PLcWg-gREeiMtq6iVbzstg"/>
-    <contextParameter comment="Répertoire fichier en sortie " name="RepOut" prompt="RepOut?" promptNeeded="false" type="id_String" value="&quot;/donnees/outdev&quot;" xmi:id="_PLcWhOgREeiMtq6iVbzstg"/>
-    <contextParameter comment="Répertoire fichier initialisation" name="RepDataIni" prompt="RepDataIni?" promptNeeded="false" type="id_String" value="&quot;d:/donnees/datainidev&quot;" xmi:id="_PLcWhegREeiMtq6iVbzstg"/>
-    <contextParameter comment="Répertoire versionning fichier permanent" name="RepVersion" prompt="RepVersion?" promptNeeded="false" type="id_String" value="&quot;d:/donnees/versiondev&quot;" xmi:id="_PLcWhugREeiMtq6iVbzstg"/>
-  </talendfile:ContextType>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b599d9b6-cdbe-48de-b3e8-0892910cb910"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EtSbjna5W3Zey9q17/auDMMZ//4McTu071l/WL0CTlitCqzp0yyVXTghzSdXCZvy/5zCOO5Yaq24
-NCK2Nk5ZZQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_130383c0-9905-47f5-9bc9-f71025e462c0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fbv4/n/+VnGTi1EaUvMXe3Ih9D1oq2fUlNvCjkjYx02eAzbhcws6QUta/TuzE5RYxe5V6rFgk4f3
-Aw6l4LBLmw==</DigestValue></Reference></SignedInfo><SignatureValue>YO1sanWyV4W+U05sSbaQFxREVF9KuzibJ1VO2GJ+2UfFI2TGj0xZBLxULeNnRjiNiP3ryAMI3xsv
-6tS6PoxAAP2V9BtKgc2M8PtB46InfMJMttxN3tr2QIExDScn1Topw00nEOGoCSWVIC0g6yjG0DlM
-oLS7uRjRgd07pbOYUEwzC1ERNyPffO2rjG1MxTqRZtbx6xPlHTKmH2soMNHh3Rhcq/zlG2ZdIwuQ
-c/bMc+4WkSlq+tIJ4f5t7yJuklC1wlc67KmEfDAuehrOz4UlK6rq3VsdqVzqcETKSpuNwY5nLSnR
-yXgKwV3tvHhxBdxVBT5Vlv+x8iXXuKvrGaacyg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <talendfile:ContextType confirmationNeeded="false" name="Default" xmi:id="_8psa0OcZEeiisoT47hPqSg"/>
+  <talendfile:ContextType confirmationNeeded="false" name="PROD" xmi:id="_PLcWgOgREeiMtq6iVbzstg"/>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f681cf4b-1e42-4d41-b4c3-8333c2be90ae"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>C0c0U/EsEOaVRqLBnfo1x57FGlX/bbUxfiZYnlSbq06AkYYSIOLEndQ/OuuUwxVpLea1HplsxWJx
+dQd1PZykvg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f10167a9-7ebb-4b4d-b849-953cb13e20d9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0uoz1jd7QiYBVTuWzCtStxou+NPOIMksnXBsoLFj/5s6bmx/pJJ0YPcS6FjV7upO5xdNEd94pwQe
+gFui/VCHbg==</DigestValue></Reference></SignedInfo><SignatureValue>bcLjDN1spLA5stFINKd00nfGJzPqi1Nj4jYsZXgjC4N45Nq2H7GNANp1QPb3YNrQOMCMzTGWLKdH
+iC4SMCe9wCIK9jRkCji3Nc30UiyMmyzKD1tHvueIQfFujVencdohzJ1LcIkfvULEFbxikorMvUBW
+cR7P9QRbTCzCfhF/NwD0M4I7aGOk95sEn+DUFiQawkQVLXxgSAm8hsf7NkSH307StR4ShpRAuHeA
+lkqsd4tsZ08RuXxow+9ZwVDV08n9v/kaJiJELUa9ys9W6G56SY5ZiWi4Nn9AslXEgrVW6AjxCGIQ
+UZTes3d+vI7qSAkFMZdo2kcIkqg9fYRoIqFs0g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -45,4 +31,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_130383c0-9905-47f5-9bc9-f71025e462c0" Target="#_b599d9b6-cdbe-48de-b3e8-0892910cb910"><Timestamp>2018-11-14 13:28:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f10167a9-7ebb-4b4d-b849-953cb13e20d9" Target="#_f681cf4b-1e42-4d41-b4c3-8333c2be90ae"><Timestamp>2018-11-14 13:30:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
