@@ -77,4 +77,36 @@ public class DMCUtils {
         
         
     }
+    /**
+     * foramtStringWithBlank: return a string value
+     * 
+     * 
+     * {Category} DMCUtils
+     * 
+     * {param} La chaine a complété
+     *         Le longeur total en sortie de la chaine
+     * 
+     * {example} foramtStringWithBlank("test", 15)   
+     */   
+	   public static String formatStringWithBlank(String asZone, int asLong) {
+	    	String lnewString = new String();
+	    	String letter = new String(" ");
+	    	int lSize;
+	        
+	    	if (asZone == null) {
+	    		return asZone;
+	    	}
+
+	    	lSize = asLong - asZone.trim().length();
+	    	for (int lIndice = 0 ; lIndice < lSize; lIndice++ ){
+	    		 lnewString=  new String(" ") +lnewString;
+	    	}
+	  
+	    	  StringBuffer buffer = new StringBuffer();
+	          for (int j = 0; j < lSize; j++) {
+	              buffer.append(letter);
+	          }
+	          lnewString = buffer.toString() + asZone.trim();
+	          return lnewString;
+	   }
 }
