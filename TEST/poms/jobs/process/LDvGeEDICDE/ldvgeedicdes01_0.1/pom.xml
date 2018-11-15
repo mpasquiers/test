@@ -60,6 +60,38 @@
       <artifactId>routines</artifactId>
       <version>7.0.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.example.test.joblet</groupId>
+      <artifactId>chargementParametre</artifactId>
+      <version>0.1.0</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.example.test.job</groupId>
+      <artifactId>LDvGeEDICDEJ04</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.test.job</groupId>
+      <artifactId>LDvGeEDICDEJ01Ctrl</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.test.job</groupId>
+      <artifactId>LDvGeEDICDEJ03Format</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.test.joblet</groupId>
+      <artifactId>gestionLog</artifactId>
+      <version>0.1.0</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.example.test.job</groupId>
+      <artifactId>LDvGeEDICDEJ02DCod</artifactId>
+      <version>0.1.0</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>${talend.job.finalName}</finalName>
