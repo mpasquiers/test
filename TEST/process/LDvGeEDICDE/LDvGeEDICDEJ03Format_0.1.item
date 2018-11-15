@@ -466,7 +466,7 @@
         <mapperTableEntries expression="Var.wcle1" name="Cle" type="id_String"/>
         <mapperTableEntries expression="StringHandling.TRIM(Var.wdata1 )" name="Data" type="id_String"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="LCde" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="LCde" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="TypeEnr" type="id_String"/>
         <mapperTableEntries expression="" name="Codeop" type="id_String"/>
         <mapperTableEntries expression="" name="DatCrePieDiv" type="id_String"/>
@@ -491,8 +491,8 @@
         <mapperTableEntries expression="" name="ModeRegl" type="id_String"/>
         <mapperTableEntries expression="" name="DateCreFic" type="id_String"/>
       </inputTables>
-      <inputTables activateExpressionFilter="true" expressionFilter="MITI.fmt(LCde.NumCdeDiv, &quot;35' 'L&quot;) == LMt.NumCde" lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" minimized="true" name="LMt" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="NumCde" type="id_String"/>
+      <inputTables columnNameFilter="" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="LMt" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="DMCUtils.formatStringWithBlank(LCde.NumCdeDiv , 35) " name="NumCde" type="id_String"/>
         <mapperTableEntries expression="" name="Mt" type="id_String"/>
       </inputTables>
     </nodeData>
@@ -572,9 +572,9 @@
       <column key="false" length="150" name="Data" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" expressionFilter="! MITI.equals(StringHandling.TRIM(LApTriFic.Cle ), &quot;*&quot;)" name="row4" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="! LApTriFic.Cle.trim().equals(&quot;*&quot;)" name="row4" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="StringHandling.TRIM(LApTriFic.Data )" name="Data" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="LApTriFic" sizeState="INTERMEDIATE">
@@ -820,10 +820,10 @@
       <column key="false" length="150" name="Data" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="(Llignes.QteCde .substring(1 ,  8 ))" name="wqte" type="id_String"/>
-        <mapperTableEntries expression="MITI.IIF(MITI.equals(StringHandling.TRIM(Llignes.Dim ), &quot;&quot;), Llignes.Matnr, StringHandling.TRIM(Llignes.Matnr ) + &quot;*&quot; + StringHandling.TRIM(Llignes.Dim ))" name="wrefFNR" type="id_String"/>
+        <mapperTableEntries expression="&quot;&quot;.equals(Trim(Llignes.Dim)) ? Llignes.Matnr : Trim(Llignes.Matnr) : '*': Trim(Llignes.Dim) " name="wrefFNR" type="id_String"/>
         <mapperTableEntries expression="Llignes.NumCdeDiv + Llignes.NumLigCdeDiv + &quot;L1&quot;" name="wcle" type="id_String"/>
         <mapperTableEntries expression="&quot;SEG_DETAIL_COLIS&quot; + &quot;|&quot; + StringHandling.TRIM(Llignes.NumCdeDiv ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + StringHandling.TRIM(Llignes.ArtCli ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + StringHandling.TRIM(wqte ) + &quot;|&quot; + StringHandling.TRIM(Llignes.PrixNetHT ) + &quot;|&quot; + StringHandling.TRIM(wrefFNR ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;FIN_SEG_DETAIL_COLIS&quot;" name="wdata" type="id_String"/>
       </varTables>
@@ -928,13 +928,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_af892dd9-d12b-4cee-af49-f1f56c24f9dd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HWG+21IHHdZSwPdS7wxnyWyhTXGaKKtklsQPzOKyL6ix98fXXGrr7yqkN55IpUFhrKNQJ0wwXqXN
-rNm57Au3yQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_238b7a79-6b7e-4578-9cfd-f422ee88d0bb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZXlqlc4nTDevHHgjNZF5dVRbTf3klbObf42kzhUfrF2tVaBo04vjYWMrAMWMUPDi2oB2kXtVjr/X
-GR/id+X1QA==</DigestValue></Reference></SignedInfo><SignatureValue>n4GUMkkBGJlV6h86g3+wOaXdcQzbVDaFnsjDt0OwKmC33DUYI8CahuVbd/RxorENPm9GSik25R9F
-2a9QK8Fs0ThJiU2A/vZNImmENN8TZIz/+zLRhPyflkknSVybu0dXYdE1UxPSkn3YvMlg3G5lmkW9
-dfiA4QRC4YZQhkUvnB66wUSGJswM3l/x8I8KDVejwjtDJA7YLEhvT99GstKaCueUglrnSV5C8Izp
-LtUNAKlxlDjak874Rw/w1c/Akp2nVaXxczDCv/uwV6nE9eFm1/GzAblI6codoeCGUKEnBe2RRFt9
-OAyacISwttTYsLUrYndi1PKeCMntBXiL0yl2Bw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f77ebfd7-a452-4a60-9be7-ba430e54bf4c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+s7NuoS7Hx/BhFqc/cMOHP17dnlg1Ry70jDdeg7jgI18REcGDw3znCLRCRZB34SIhev2raGCJowM
+pVqiQ4lTdA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a623097c-97b5-4ea5-905a-1236a2b5b913"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TfzoYiSE+NugUUTIqX8GbOj5c29vSNQG0jijiNmn9yRfcErfZz70nyI19MCOfuh3dCojoQy1vTr1
+VDznivWEWA==</DigestValue></Reference></SignedInfo><SignatureValue>QQ9USmwpi7uBhZUxd4dB/7Ub/44ri11cHhsXTEbK8zswJ1z3e2UCya0KFatNY7jw/02EvsdpC7ti
+42IF3WvArthvGDo1LAtjPNfNc0Gh7Kym2SwO+Swi90Cx9JjUVX8c8VcgKGhsG0grb3YKmad014KD
+tjxde65i+lFOhTNqZrnGXpOOim//xU0QRx55mq+gVSYmaU6zbhP+bMYvDjF+u5x1gfC4/7z0yO0L
+OfJDfirLV89obqTaIJEtWStqbUR3i+G6SCbZTipa4++rW3XUMcbQ1k5cAVBy3gkXI9/5rUYRBiAU
+5qXaG/8lXD2BmihWVGUGvK+mxtX27PPgTep0rg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -958,4 +958,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_238b7a79-6b7e-4578-9cfd-f422ee88d0bb" Target="#_af892dd9-d12b-4cee-af49-f1f56c24f9dd"><Timestamp>2018-11-15 10:44:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a623097c-97b5-4ea5-905a-1236a2b5b913" Target="#_f77ebfd7-a452-4a60-9be7-ba430e54bf4c"><Timestamp>2018-11-15 11:59:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
