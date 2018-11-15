@@ -98,11 +98,7 @@ public class DMCUtils {
 	    	}
 
 	    	lSize = asLong - asZone.trim().length();
-/*	    	for (int lIndice = 0 ; lIndice < lSize; lIndice++ ){
-#	    		 lnewString=  new String(" ") +lnewString;
-	    	}
-*/	  
-	    	  StringBuffer buffer = new StringBuffer();
+       	    StringBuffer buffer = new StringBuffer();
 	          for (int j = 0; j < lSize; j++) {
 	              buffer.append(letter);
 	          }
@@ -121,11 +117,9 @@ public class DMCUtils {
 	        var_nbr_decimal = asZone.trim().length() - var_position;
 	        
 	        lSize = asNbrDecimale - var_nbr_decimal;
-	        for (int lIndice = 0 ; lIndice < lSize; lIndice++ ){
-	    		 lnewString=  new String("0") +lnewString;
-	    	}
-	    	  StringBuffer buffer = new StringBuffer();
-	          for (int j = 0; j < lSize; j++) {
+
+	        StringBuffer buffer = new StringBuffer();
+	        for (int j = 0; j < lSize; j++) {
 	              buffer.append(letter);
 	          }	        
 	        lnewString = asZone.trim() + buffer.toString();
