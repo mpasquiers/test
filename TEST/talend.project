@@ -929,6 +929,17 @@
     </ItemsRelations>
     <ItemsRelations xmi:id="_mPePYOisEeiPGcU4H_o8Kg">
       <baseItem xmi:id="_mPePYeisEeiPGcU4H_o8Kg" id="_jrpn6OisEei8Q_9yEvbE6g" version="0.1" type="job"/>
+      <relatedItems xmi:id="_KspnMOjmEeiPGcU4H_o8Kg" id="__75E0Gf4Eei7nvte-9yivQ" version="Latest" type="context"/>
+      <relatedItems xmi:id="_KspnMejmEeiPGcU4H_o8Kg" id="SQLike" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_KspnMujmEeiPGcU4H_o8Kg" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_KspnM-jmEeiPGcU4H_o8Kg" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_KspnNOjmEeiPGcU4H_o8Kg" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_KspnNejmEeiPGcU4H_o8Kg" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_KspnNujmEeiPGcU4H_o8Kg" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_KspnN-jmEeiPGcU4H_o8Kg" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_KspnOOjmEeiPGcU4H_o8Kg" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_KspnOejmEeiPGcU4H_o8Kg" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_KspnOujmEeiPGcU4H_o8Kg" id="Mathematical" version="Latest" type="routine"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_mPePYuisEeiPGcU4H_o8Kg">
       <baseItem xmi:id="_mPePY-isEeiPGcU4H_o8Kg" id="_jsA0IeisEei8Q_9yEvbE6g" version="0.1" type="job"/>
