@@ -957,6 +957,12 @@
       <relatedItems xmi:id="_hTTwB-ivEeiPGcU4H_o8Kg" id="TalendDataGenerator" version="Latest" type="routine"/>
       <relatedItems xmi:id="_hTTwCOivEeiPGcU4H_o8Kg" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_hTTwCeivEeiPGcU4H_o8Kg" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_3bzzMOjmEeiPGcU4H_o8Kg" id="_z-UigGibEeiOqsLvjspbzQ" version="Latest" type="context"/>
+      <relatedItems xmi:id="_3bzzMejmEeiPGcU4H_o8Kg" id="_an880GlvEeiq3tGRrRNTtg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_3bzzMujmEeiPGcU4H_o8Kg" id="__75E0Gf4Eei7nvte-9yivQ" version="Latest" type="context"/>
+      <relatedItems xmi:id="_3bzzM-jmEeiPGcU4H_o8Kg" id="_E1OekOcqEeiisoT47hPqSg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_3bzzNOjmEeiPGcU4H_o8Kg" id="_hMR34OcjEeiisoT47hPqSg" version="Latest" type="joblet"/>
+      <relatedItems xmi:id="_3bzzNejmEeiPGcU4H_o8Kg" id="DMCUtils" version="Latest" type="routine"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_mPePZOisEeiPGcU4H_o8Kg">
       <baseItem xmi:id="_mPePZeisEeiPGcU4H_o8Kg" id="_jrf28uisEei8Q_9yEvbE6g" version="0.1" type="job"/>
