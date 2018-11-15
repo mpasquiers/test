@@ -31,16 +31,16 @@
     <module>jobs/process/Cpre/cpres002_0.1</module>
     <module>jobs/process/Cpal/cpals002_0.1</module>
     <module>jobs/joblets/gestionlog_0.1</module>
-    <module>jobs/process/test/demolog_0.1</module>
     <module>jobs/joblets/chargementparametre_0.1</module>
-    <module>jobs/process/test/demo_master_0.1</module>
-    <module>jobs/process/test/demo_tmap_0.1</module>
-    <module>jobs/process/test/demo_mysql_0.1</module>
-    <module>jobs/process/test/demo_tjava_0.1</module>
-    <module>jobs/process/test/demojob_0.1</module>
-    <module>jobs/process/test/demoump_0.1</module>
-    <module>jobs/process/test/test_routientemps_0.1</module>
     <module>jobs/process/General/majdatesparam_0.1</module>
+    <module>jobs/process/oliv/test/demo_master_0.1</module>
+    <module>jobs/process/oliv/test/demo_mysql_0.1</module>
+    <module>jobs/process/oliv/test/demo_tjava_0.1</module>
+    <module>jobs/process/oliv/test/demo_tmap_0.1</module>
+    <module>jobs/process/oliv/test/demojob_0.1</module>
+    <module>jobs/process/oliv/test/demolog_0.1</module>
+    <module>jobs/process/oliv/test/demoump_0.1</module>
+    <module>jobs/process/oliv/test/test_routientemps_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TEST</talend.project.name>
