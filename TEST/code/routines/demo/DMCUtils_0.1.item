@@ -78,7 +78,7 @@ public class DMCUtils {
         
     }
     /**
-     * foramtStringWithBlank: return a string value
+     * formatStringWithBlank: return a string value
      * 
      * 
      * {Category} DMCUtils
@@ -86,7 +86,7 @@ public class DMCUtils {
      * {param} La chaine a complété
      *         Le longeur total en sortie de la chaine
      * 
-     * {example} foramtStringWithBlank("test", 15)   
+     * {example} formatStringWithBlank("test", 15)   
      */   
 	   public static String formatStringWithBlank(String asZone, int asLong) {
 	    	String lnewString = new String();
