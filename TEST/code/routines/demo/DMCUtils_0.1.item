@@ -80,7 +80,7 @@ public class DMCUtils {
     /**
      * formatStringWithBlank: return a string value
      * 
-     * 
+     * {talendTypes} String
      * {Category} DMCUtils
      * 
      * {param} La chaine a complété
@@ -108,7 +108,7 @@ public class DMCUtils {
 	    /**
 	     * formatStringwithDecimal: return a string value
 	     * 
-	     * 
+         * {talendTypes} String
 	     * {Category} DMCUtils
 	     * 
 	     * {param} La chaine a complété
