@@ -117,7 +117,7 @@ public class DMCUtils {
 	     * {example} formatNombreAvecDecimal("123.1", 4)   
 	     *           retourne 123.1000
 	     */ 	   
-	   public String formatStringwithDecimal(String asZone, int asNbrDecimale)
+	   public static String formatStringwithDecimal(String asZone, int asNbrDecimale)
 	    {  int var_position;
 		   int var_nbr_decimal;
 		   int lSize;
