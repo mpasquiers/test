@@ -106,7 +106,7 @@ public class DMCUtils {
 	          for (int j = 0; j < lSize; j++) {
 	              buffer.append(letter);
 	          }
-	          lnewString = buffer.toString() + asZone.trim();
+	          lnewString = asZone.trim() + buffer.toString();
 	          return lnewString;
 	   }
 }
