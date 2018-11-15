@@ -105,7 +105,18 @@ public class DMCUtils {
 	          lnewString = asZone.trim() + buffer.toString();
 	          return lnewString;
 	   }
-	   
+	    /**
+	     * formatNombreAvecDecimal: return a string value
+	     * 
+	     * 
+	     * {Category} DMCUtils
+	     * 
+	     * {param} La chaine a complété
+	     *         Le nombre de cimal en sortie
+	     * 
+	     * {example} formatNombreAvecDecimal("123.1", 4)   
+	     *           retourne 123.1000
+	     */ 	   
 	   public String formatNombreAvecDecimal(String asZone, int asNbrDecimale)
 	    {  int var_position;
 		   int var_nbr_decimal;
