@@ -125,6 +125,7 @@ public class DMCUtils {
 		   int lSize;
 		   
 	        var_position = asZone.indexOf( '.' );
+	        System.out.println(var_position);
 	        var_nbr_decimal = asZone.trim().length() - var_position;
 	        
 	        lSize = asNbrDecimale - var_nbr_decimal;
