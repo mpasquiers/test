@@ -998,6 +998,20 @@
       <relatedItems xmi:id="_chcxSui0EeiPGcU4H_o8Kg" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_chcxS-i0EeiPGcU4H_o8Kg" id="Mathematical" version="Latest" type="routine"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_pHzkEOjQEeiPGcU4H_o8Kg">
+      <baseItem xmi:id="_pHzkEejQEeiPGcU4H_o8Kg" id="_DywZMOjQEeiPGcU4H_o8Kg" version="0.1" type="job"/>
+      <relatedItems xmi:id="_pHzkEujQEeiPGcU4H_o8Kg" id="SQLike" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_pHzkE-jQEeiPGcU4H_o8Kg" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_pHzkFOjQEeiPGcU4H_o8Kg" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_pHzkFejQEeiPGcU4H_o8Kg" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_pHzkFujQEeiPGcU4H_o8Kg" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_pHzkF-jQEeiPGcU4H_o8Kg" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_pHzkGOjQEeiPGcU4H_o8Kg" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_pHzkGejQEeiPGcU4H_o8Kg" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_pHzkGujQEeiPGcU4H_o8Kg" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_pHzkG-jQEeiPGcU4H_o8Kg" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_pHzkHOjQEeiPGcU4H_o8Kg" id="DMCUtils" version="Latest" type="routine"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_7kr30OabEeipONB1Z5jsPQ" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_7k1o0OabEeipONB1Z5jsPQ" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_7k1o0eabEeipONB1Z5jsPQ" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
