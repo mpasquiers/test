@@ -61,6 +61,11 @@
       <version>7.0.1</version>
     </dependency>
     <dependency>
+      <groupId>org.example.test.job</groupId>
+      <artifactId>LDvGeEDICDEJ05Texte2</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.example.test.joblet</groupId>
       <artifactId>chargementParametre</artifactId>
       <version>0.1.0</version>
@@ -82,10 +87,20 @@
       <version>0.1.0</version>
     </dependency>
     <dependency>
+      <groupId>org.example.test.job</groupId>
+      <artifactId>LDvGeEDICDEJ05Texte1</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.example.test.joblet</groupId>
       <artifactId>gestionLog</artifactId>
       <version>0.1.0</version>
       <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.example.test.job</groupId>
+      <artifactId>LDvGeEDICDEJ05Texte3</artifactId>
+      <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>org.example.test.job</groupId>
