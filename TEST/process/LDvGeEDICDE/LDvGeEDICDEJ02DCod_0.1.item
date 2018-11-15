@@ -2,11 +2,17 @@
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="ExeFicIn" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ01Ctrl&quot;"/>
     <contextParameter comment="" name="ExeQt" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodMT&quot;"/>
-    <contextParameter comment="" name="CnxPathTemp" prompt="" promptNeeded="false" type="id_String" value="&quot;D:\\Donnees\\ETL\\Tempdev&quot;"/>
     <contextParameter comment="" name="ExeHlig" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodLig&quot;"/>
     <contextParameter comment="" name="ExeHent" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodEnt&quot;"/>
     <contextParameter comment="" name="ExeOH" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodPostCde&quot;"/>
     <contextParameter comment="" name="ExeQtSeq" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodMtSeq&quot;"/>
+    <contextParameter comment="fichier temporaire" name="CnxPathTemp" prompt="CnxPathTemp?" promptNeeded="false" repositoryContextId="__75E0Gf4Eei7nvte-9yivQ" type="id_Directory" value="d:/donnees/etl/tempdev"/>
+    <contextParameter comment="" name="nomSequence" prompt="nomSequence?" promptNeeded="false" repositoryContextId="_E1OekOcqEeiisoT47hPqSg" type="id_String" value=""/>
+    <contextParameter comment="" name="RepFichierLog" prompt="RepFichierLog?" promptNeeded="false" repositoryContextId="_E1OekOcqEeiisoT47hPqSg" type="id_String" value="&quot;d:/prd/de010/log.w&quot;"/>
+    <contextParameter comment="" name="MailDestError" prompt="MailDestError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;sfreexploitanolc@dmc.fr&quot;"/>
+    <contextParameter comment="" name="MailEmetError" prompt="MailEmetError?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;srvetl01@dmc.fr&quot;"/>
+    <contextParameter comment="" name="SmtpPort" prompt="SmtpPort?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="25"/>
+    <contextParameter comment="" name="SmtpServeur" prompt="SmtpServeur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;zimbra.newel.net&quot;"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -111,11 +117,12 @@
     <routinesParameter id="_7sH8luabEeipONB1Z5jsPQ" name="TalendDate"/>
     <routinesParameter id="_7sa3gOabEeipONB1Z5jsPQ" name="TalendStringUtil"/>
     <routinesParameter id="_7sRtluabEeipONB1Z5jsPQ" name="TalendString"/>
+    <routinesParameter id="_hcrO0OfoEei1bOo2uAs1XA" name="DMCUtils"/>
   </parameters>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="96">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;\\\\&quot;  + context.ExeFicIn"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/LDvGeEDICDEJ01Ctrl&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -151,7 +158,7 @@
     </elementParameter>
     <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ01Ctrl_LCdeEdiClient"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ01Ctrl"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileInputDelimited_1">
       <column key="false" length="328" name="Param" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
@@ -162,7 +169,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="256">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -177,35 +184,35 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="DCode"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="row4">
+    <metadata connector="FLOW" name="ENT">
       <column key="false" length="3" name="TypeEnr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="3" name="Codeop" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="8" name="DatCrePieDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="8" name="NumCdeDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="NumCdeDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="15" name="NumCdeCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="8" name="DateCdeCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="8" name="DateLivSouh" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="8" name="DateDelaiDem" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="8" name="TiersDonOrdre" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="20" name="NumExtDO" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="38" name="NomCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="3" name="PayDO" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="8" name="TiersLivr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="20" name="NumExtAdrLiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="38" name="NomAdrLiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="3" name="PayAdrLiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="20" name="NumFourDMC" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="38" name="RaiSocDMC" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="13" name="ValHTCde" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="4" name="Devise" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="40" name="Commentaire" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="4" name="ModeRegl" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="8" name="DateCreFic" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="38" name="NomCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="3" name="PayDO" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="TiersLivr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="NumExtAdrLiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="38" name="NomAdrLiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="3" name="PayAdrLiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="NumFourDMC" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="38" name="RaiSocDMC" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="13" name="ValHTCde" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="Devise" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="40" name="Commentaire" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="ModeRegl" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="DateCreFic" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata connector="FLOW" name="row5">
+    <metadata connector="FLOW" name="LIG">
       <column key="false" length="3" name="TypeEnr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="8" name="NumCdeDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="9" name="NumLigCdeDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="NumCdeDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="NumLigCdeDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="35" name="ArtCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="20" name="Matnr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="8" name="Dim" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -214,26 +221,26 @@
       <column key="false" length="15" name="QteCde" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="13" name="PrixNetHT" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="13" name="Montant" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="4" name="Devise" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="15" name="NumLigCdeCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="20" name="NumCdeMag" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="true" length="20" name="NumMag" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="Devise" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="15" name="NumLigCdeCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="NumCdeMag" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="NumMag" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata connector="FLOW" name="row7">
+    <metadata connector="FLOW" name="LIG2">
       <column key="false" length="35" name="NumCde" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="20" name="Matnr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="8" name="Dim" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="12" name="Qt" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column key="true" length="15" name="PrixNet" nullable="false" precision="4" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="15" name="PrixNet" nullable="false" precision="4" sourceType="" type="id_Float" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(1 ,  3 ))" name="Segment" type="id_String"/>
-        <mapperTableEntries expression="MITI.IIF(MITI.equals(Var.Segment, &quot;LIG&quot;), (LCdeEdiClient.Param .substring(98 ,  12 )), Var.WQt)" name="WQt" type="id_String"/>
-        <mapperTableEntries expression="MITI.IIF(MITI.equals(Var.Segment, &quot;LIG&quot;), (LCdeEdiClient.Param .substring(110 ,  13 )), Var.WPrix)" name="WPrix" type="id_String"/>
+        <mapperTableEntries expression="LCdeEdiClient.Param .substring(0,3 ) " name="Segment" type="id_String"/>
+        <mapperTableEntries expression="&quot;LIG&quot;.equals(Var.Segment) ? LCdeEdiClient.Param .substring(97 ,  12 ) : &quot;&quot; " name="WQt" type="id_String"/>
+        <mapperTableEntries expression="&quot;LIG&quot;.equals(Var.Segment) ? LCdeEdiClient.Param .substring(109 ,  13 ) : &quot;&quot; " name="WPrix" type="id_String"/>
       </varTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(Var.Segment, &quot;ENT&quot;)" name="row4" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="Var.Segment.equals(&quot;ENT&quot;)&#13;&#10;" name="ENT" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Var.Segment" name="TypeEnr" type="id_String"/>
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(4 ,  3 ))" name="Codeop" type="id_String"/>
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(13 ,  2 )) + (LCdeEdiClient.Param .substring(11 ,  2 )) + (LCdeEdiClient.Param .substring(7 ,  4 ))" name="DatCrePieDiv" type="id_String"/>
@@ -258,7 +265,7 @@
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(315 ,  4 ))" name="ModeRegl" type="id_String"/>
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(325 ,  2 )) + (LCdeEdiClient.Param .substring(323 ,  2 )) + (LCdeEdiClient.Param .substring(319 ,  4 ))" name="DateCreFic" type="id_String"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(Var.Segment, &quot;LIG&quot;)" name="row5" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="Var.Segment.equals(&quot;LIG&quot;)&#13;&#10;" name="LIG" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Var.Segment" name="TypeEnr" type="id_String"/>
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(4 ,  8 ))" name="NumCdeDiv" type="id_String"/>
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(12 ,  9 ))" name="NumLigCdeDiv" type="id_String"/>
@@ -275,7 +282,7 @@
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(155 ,  20 ))" name="NumCdeMag" type="id_String"/>
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(175 ,  20 ))" name="NumMag" type="id_String"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(Var.Segment, &quot;LIG&quot;)" name="row7" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" expressionFilter="Var.Segment.equals(&quot;LIG&quot;)" name="LIG2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(4 ,  8 ))" name="NumCde" type="id_String"/>
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(56 ,  20 ))" name="Matnr" type="id_String"/>
         <mapperTableEntries expression="(LCdeEdiClient.Param .substring(76 ,  8 ))" name="Dim" type="id_String"/>
@@ -287,11 +294,11 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="416">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;\\&quot;  + context.ExeHent"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/LDvGeEDICDEJ02DCodEnt&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -319,36 +326,36 @@
     <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodEnt_LEnt"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1">
-      <column key="false" length="3" name="TypeEnr" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="3" name="Codeop" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="8" name="DatCrePieDiv" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="8" name="NumCdeDiv" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="15" name="NumCdeCli" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="8" name="DateCdeCli" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="8" name="DateLivSouh" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="8" name="DateDelaiDem" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="8" name="TiersDonOrdre" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="NumExtDO" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="38" name="NomCli" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="3" name="PayDO" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="8" name="TiersLivr" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="20" name="NumExtAdrLiv" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="38" name="NomAdrLiv" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="3" name="PayAdrLiv" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="20" name="NumFourDMC" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="38" name="RaiSocDMC" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="13" name="ValHTCde" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="4" name="Devise" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="40" name="Commentaire" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="4" name="ModeRegl" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="8" name="DateCreFic" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="3" name="TypeEnr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="3" name="Codeop" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="DatCrePieDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="NumCdeDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="15" name="NumCdeCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="DateCdeCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="DateLivSouh" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="DateDelaiDem" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="TiersDonOrdre" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="NumExtDO" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="38" name="NomCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="3" name="PayDO" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="TiersLivr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="NumExtAdrLiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="38" name="NomAdrLiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="3" name="PayAdrLiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="NumFourDMC" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="38" name="RaiSocDMC" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="13" name="ValHTCde" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="Devise" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="40" name="Commentaire" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="ModeRegl" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="DateCreFic" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="448">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_2"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;\\&quot;  + context.ExeHlig"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/LDvGeEDICDEJ02DCodLig&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -376,57 +383,57 @@
     <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodLig_LLig"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_2">
-      <column key="false" length="3" name="TypeEnr" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="8" name="NumCdeDiv" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="9" name="NumLigCdeDiv" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="35" name="ArtCli" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="Matnr" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="8" name="Dim" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="10" name="ParCombien" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="4" name="UniteCde" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="15" name="QteCde" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="PrixNetHT" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="13" name="Montant" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="4" name="Devise" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="15" name="NumLigCdeCli" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="20" name="NumCdeMag" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="true" length="20" name="NumMag" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="3" name="TypeEnr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="NumCdeDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="9" name="NumLigCdeDiv" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="35" name="ArtCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="Matnr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="Dim" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="10" name="ParCombien" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="UniteCde" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="15" name="QteCde" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="13" name="PrixNetHT" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="13" name="Montant" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4" name="Devise" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="15" name="NumLigCdeCli" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="NumCdeMag" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="NumMag" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputPositional" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="384">
+  <node componentName="tFileOutputPositional" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputPositional_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/&quot;  + context.ExeOH"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/LDvGeEDICDEJ02DCodPostCde&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="APPEND" value="false"/>
     <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
     <elementParameter field="CHECK" name="COMPRESS" value="false"/>
     <elementParameter field="TABLE" name="FORMATS">
       <elementValue elementRef="SCHEMA_COLUMN" value="NumCde"/>
-      <elementValue elementRef="SIZE" value="10"/>
+      <elementValue elementRef="SIZE" value="35"/>
       <elementValue elementRef="PADDING_CHAR" value="' '"/>
       <elementValue elementRef="ALIGN" value="'L'"/>
       <elementValue elementRef="KEEP" value="'A'"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Matnr"/>
-      <elementValue elementRef="SIZE" value="10"/>
+      <elementValue elementRef="SIZE" value="20"/>
       <elementValue elementRef="PADDING_CHAR" value="' '"/>
       <elementValue elementRef="ALIGN" value="'L'"/>
       <elementValue elementRef="KEEP" value="'A'"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Dim"/>
-      <elementValue elementRef="SIZE" value="10"/>
+      <elementValue elementRef="SIZE" value="8"/>
       <elementValue elementRef="PADDING_CHAR" value="' '"/>
       <elementValue elementRef="ALIGN" value="'L'"/>
       <elementValue elementRef="KEEP" value="'A'"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Qt"/>
-      <elementValue elementRef="SIZE" value="10"/>
+      <elementValue elementRef="SIZE" value="12"/>
       <elementValue elementRef="PADDING_CHAR" value="' '"/>
       <elementValue elementRef="ALIGN" value="'L'"/>
       <elementValue elementRef="KEEP" value="'A'"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="PrixNet"/>
-      <elementValue elementRef="SIZE" value="10"/>
+      <elementValue elementRef="SIZE" value="15"/>
       <elementValue elementRef="PADDING_CHAR" value="' '"/>
       <elementValue elementRef="ALIGN" value="'L'"/>
       <elementValue elementRef="KEEP" value="'A'"/>
@@ -445,211 +452,20 @@
     <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodPostCde_LPostCde"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputPositional_2">
-      <column key="false" length="35" name="NumCde" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="Matnr" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="8" name="Dim" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="12" name="Qt" nullable="false" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
-      <column key="true" length="15" name="PrixNet" nullable="false" precision="4" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="35" name="NumCde" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="20" name="Matnr" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="8" name="Dim" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="12" name="Qt" nullable="false" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column key="false" length="15" name="PrixNet" nullable="false" precision="4" sourceType="" type="id_Float" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileInputPositional" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="576">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputPositional_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_jqdU8OisEei8Q_9yEvbE6g"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/ADMINI~1.DMC/AppData/Local/Temp/5/talend_bridge/talend_import/LDvGeEDICde.dsx/data/D__Donnees/LDvGeEDICDEJ02DCodMtSeq&quot;"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="CHECK" name="ADVANCED_OPTION" value="false"/>
-    <elementParameter field="TEXT" name="PATTERN" value="&quot;5,4,5&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="PATTERN_UNITS" value="SYMBOLS"/>
-    <elementParameter field="TABLE" name="FORMATS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="NumCde"/>
-      <elementValue elementRef="SIZE" value="10"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Mt"/>
-      <elementValue elementRef="SIZE" value="10"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
-    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TEXT" name="HEADER" value="0"/>
-    <elementParameter field="TEXT" name="FOOTER" value="0"/>
-    <elementParameter field="TEXT" name="LIMIT" value=""/>
-    <elementParameter field="CHECK" name="PROCESS_LONG_ROW" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="TRIMALL" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
-    <elementParameter field="TABLE" name="TRIMSELECT" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="NumCde"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Mt"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodMtSeq_LAvSum"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileInputPositional_1">
-      <column key="false" length="35" name="NumCde" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="15" name="Mt" nullable="false" precision="4" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column key="false" length="35" name="NumCde" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="15" name="Mt" nullable="false" precision="4" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="768">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_3"/>
-    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
-    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;\\&quot;  + context.ExeQt"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
-    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
-    <elementParameter field="CHECK" name="APPEND" value="false"/>
-    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
-    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
-    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
-    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
-    <elementParameter field="CHECK" name="CREATE" value="true"/>
-    <elementParameter field="CHECK" name="SPLIT" value="false"/>
-    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
-    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
-    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
-    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
-    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
-    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodMT_LApSum"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileOutputDelimited_3">
-      <column key="true" length="35" name="NumCde" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="15" name="Mt" nullable="false" precision="4" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="640">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="NumCde"/>
-      <elementValue elementRef="INPUT_COLUMN" value="NumCde"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="Mt"/>
-      <elementValue elementRef="FUNCTION" value="sum"/>
-      <elementValue elementRef="INPUT_COLUMN" value="Mt"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="SumQt"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="row1">
-      <column key="true" length="35" name="NumCde" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="15" name="Mt" nullable="false" precision="4" sourceType="" type="id_Float" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tFileInputPositional" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="576">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputPositional_2"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_jqnF8eisEei8Q_9yEvbE6g"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/ADMINI~1.DMC/AppData/Local/Temp/5/talend_bridge/talend_import/LDvGeEDICde.dsx/data/D__Donnees/LDvGeEDICDEJ02DCodPostCde&quot;"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="CHECK" name="ADVANCED_OPTION" value="false"/>
-    <elementParameter field="TEXT" name="PATTERN" value="&quot;5,4,5&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="PATTERN_UNITS" value="SYMBOLS"/>
-    <elementParameter field="TABLE" name="FORMATS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="NumCde"/>
-      <elementValue elementRef="SIZE" value="10"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Matnr"/>
-      <elementValue elementRef="SIZE" value="10"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Dim"/>
-      <elementValue elementRef="SIZE" value="10"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Qt"/>
-      <elementValue elementRef="SIZE" value="10"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PrixNet"/>
-      <elementValue elementRef="SIZE" value="10"/>
-      <elementValue elementRef="PADDING_CHAR" value="' '"/>
-      <elementValue elementRef="ALIGN" value="'L'"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
-    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TEXT" name="HEADER" value="0"/>
-    <elementParameter field="TEXT" name="FOOTER" value="0"/>
-    <elementParameter field="TEXT" name="LIMIT" value=""/>
-    <elementParameter field="CHECK" name="PROCESS_LONG_ROW" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="TRIMALL" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
-    <elementParameter field="TABLE" name="TRIMSELECT" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="NumCde"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Matnr"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Dim"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Qt"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PrixNet"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodPostCde_LPosteCde"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileInputPositional_2">
-      <column key="false" length="35" name="NumCde" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="Matnr" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="8" name="Dim" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="12" name="Qt" nullable="false" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
-      <column key="false" length="15" name="PrixNet" nullable="false" precision="4" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column key="false" length="35" name="NumCde" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="20" name="Matnr" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="8" name="Dim" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="12" name="Qt" nullable="false" precision="0" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
-      <column key="false" length="15" name="PrixNet" nullable="false" precision="4" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tFileOutputPositional" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="768">
+  <node componentName="tFileOutputPositional" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputPositional_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/&quot;  + context.ExeQtSeq"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/LDvGeEDICDEJ02DCodMtSeq&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="APPEND" value="false"/>
     <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
@@ -684,7 +500,7 @@
       <column key="false" length="15" name="Mt" nullable="false" precision="4" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="640">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -719,66 +535,135 @@
       </inputTables>
     </nodeData>
   </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_3"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/LDvGeEDICDEJ02DCodMT&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodMT_LApSum"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_3">
+      <column key="true" length="35" name="NumCde" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="15" name="Mt" nullable="false" precision="4" sourceType="NUMERIC" type="id_Float" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="NumCde"/>
+      <elementValue elementRef="INPUT_COLUMN" value="NumCde"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="Mt"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Mt"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="SumQt"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="row1">
+      <column key="true" length="35" name="NumCde" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="15" name="Mt" nullable="false" precision="4" sourceType="" type="id_Float" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="gestionLog" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="gestionLog_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="LABEL" value="gestionLog"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
   <connection connectorName="FLOW" label="LCdeEdiClient" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="LCdeEdiClient"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="row4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tFileOutputDelimited_1">
+  <connection connectorName="FLOW" label="ENT" lineStyle="0" metaname="ENT" offsetLabelX="50" offsetLabelY="41" outputId="1" source="tMap_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ENT"/>
   </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="row5" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tFileOutputDelimited_2">
+  <connection connectorName="FLOW" label="LIG" lineStyle="0" metaname="LIG" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tFileOutputDelimited_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="LIG"/>
   </connection>
-  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="row7" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_1" target="tFileOutputPositional_2">
+  <connection connectorName="FLOW" label="LIG2" lineStyle="0" metaname="LIG2" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_1" target="tFileOutputPositional_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="LIG2"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputPositional_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputPositional_1" target="tAggregateRow_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
-  </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tFileOutputDelimited_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
-  <connection connectorName="FLOW" label="LPosteCde" lineStyle="0" metaname="tFileInputPositional_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputPositional_2" target="tMap_2">
+  <connection connectorName="FLOW" label="LPosteCde" lineStyle="0" metaname="tFileOutputPositional_2" offsetLabelX="0" offsetLabelY="0" source="tFileOutputPositional_2" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="LPosteCde"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileOutputPositional_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputPositional_1" target="tAggregateRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="row6" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tFileOutputPositional_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
-  <note opaque="true" posX="608" posY="32" sizeHeight="193" sizeWidth="545" text="DCode&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;TRechCab&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tFileOutputDelimited_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <note opaque="true" posX="992" posY="0" sizeHeight="193" sizeWidth="545" text="DCode&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;TRechCab&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
     <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
     <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="false"/>
     <elementParameter field="RADIO" name="NOTETXT_TOP" value="true"/>
   </note>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputPositional_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="gestionLog_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputPositional_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_483428d1-c5f1-4683-8be9-f8cf51de64b3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Bt7qrofPwJ4+BNq8FMNFLRW+lORoR/7Mg9K4STXwkkHmFGCd8q1ktyJD1jQdxzWKGWad+2mjKnTB
-7fEYRTB5/w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c67491ca-c542-41da-b492-1c47de46be06"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NnVMSnJRCXFFPYhQNA3IzwTPqO70upA6yDfbMOl9QjaqF084WPVhcR7s5lrYswvAGn8oeiSsSAGR
-wMyHypIdhA==</DigestValue></Reference></SignedInfo><SignatureValue>Royirl9fnEjWYLNRhwoekX3tQDQjOV2fpt4xZQUMw8MlgFuwzs8x4hg2dxpBzdhuk1dU753n8E9i
-VO1a2SwHmi0L/tgRv/JXB/roXy5OuY15URbJgQGi7V97xxTblqoOM/SU5rwFdK8q1qJpwvwS7315
-LUIPif/zSnJm1sNI2W8JI+5tcRcjSqzOXNQi0OMWwNjTaTxkpBb1mnRYOcwpfZEi+qBu47yWQHWJ
-XTQ37tSrzlALFsR1xfBG765pz80nNZzB8mcCaODCwFYdEiqAK4Y8lQvRX5yltvSU+Tk9wRlQZ2fX
-hBWLBN+K1sRS53TgdNWWir3nOvcnAfudN7G/vQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_345be178-fef8-4d8d-bdb0-0155fd626c49"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5LadT+4YxC83fo484xQwe8wI6eyFETMUy9mSNN/DAAOK5WG1vOhqjyAJWqfLI62LYfh7akqKLRZ4
+mFLv463Z4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_21d72a1d-d241-493e-bd37-3a915d9bff5e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4FFoib1E7Cwl26Se/hIE+wa/+mygCWxp+t4MVhLWlBjqcOVJEOuomgxiFmBmQkVsD9Rjx6ad4Ycn
+Lge0kz1+jA==</DigestValue></Reference></SignedInfo><SignatureValue>yHdVqxT7xO4poFqW/DOD+7leusMJjb0nSgeGY9yteJv2YDCUezc2h3bjBtad2yjlgUNsg1OLkAau
+C+WtDesYh6A+5PASRLbVeSiCxENAlrvt+1fmsZBsBPRojQXnveZZtMaAJ51EIvE8xz0x+tUkgp+o
+yFUsPB8icjhPKMhTKbxxWEs/1pCvAYOTCwG1tcU4InsiDhGBzNRr09dlG69ans4wjp2YC9Dienjl
+6LfsQt9EnoUFKS+7UjFO8d2YpxhwYpw6RI9HxrvieDAPhUxIE5N5hC/pBB33TOlehinJk4HNF2c5
+JdxirPuHDHJGbhJ3E4NTfqtqa+NleQi8CUn73A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -802,4 +687,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c67491ca-c542-41da-b492-1c47de46be06" Target="#_483428d1-c5f1-4683-8be9-f8cf51de64b3"><Timestamp>2018-11-15 08:22:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_21d72a1d-d241-493e-bd37-3a915d9bff5e" Target="#_345be178-fef8-4d8d-bdb0-0155fd626c49"><Timestamp>2018-11-15 09:44:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
