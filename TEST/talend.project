@@ -909,6 +909,29 @@
       <relatedItems xmi:id="_9oWqgeghEeiMtq6iVbzstg" id="_YTIMQOcrEeiisoT47hPqSg" version="Latest" type="joblet"/>
       <relatedItems xmi:id="_S5_70OglEeiMtq6iVbzstg" id="_an880GlvEeiq3tGRrRNTtg" version="Latest" type="context"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_mPUeYOisEeiPGcU4H_o8Kg">
+      <baseItem xmi:id="_mPUeYeisEeiPGcU4H_o8Kg" id="_jmvSkeisEei8Q_9yEvbE6g" version="0.1" type="job"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_mPePYOisEeiPGcU4H_o8Kg">
+      <baseItem xmi:id="_mPePYeisEeiPGcU4H_o8Kg" id="_jrpn6OisEei8Q_9yEvbE6g" version="0.1" type="job"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_mPePYuisEeiPGcU4H_o8Kg">
+      <baseItem xmi:id="_mPePY-isEeiPGcU4H_o8Kg" id="_jsA0IeisEei8Q_9yEvbE6g" version="0.1" type="job"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_mPePZOisEeiPGcU4H_o8Kg">
+      <baseItem xmi:id="_mPePZeisEeiPGcU4H_o8Kg" id="_jrf28uisEei8Q_9yEvbE6g" version="0.1" type="job"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_mPePZuisEeiPGcU4H_o8Kg">
+      <baseItem xmi:id="_mPePZ-isEeiPGcU4H_o8Kg" id="_jstXseisEei8Q_9yEvbE6g" version="0.1" type="job"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_mPePaOisEeiPGcU4H_o8Kg">
+      <baseItem xmi:id="_mPePaeisEeiPGcU4H_o8Kg" id="_jrDLBuisEei8Q_9yEvbE6g" version="0.1" type="job"/>
+      <relatedItems xmi:id="_mPePauisEeiPGcU4H_o8Kg" id="_jqnF8eisEei8Q_9yEvbE6g" version="Latest" type="property"/>
+      <relatedItems xmi:id="_mPePa-isEeiPGcU4H_o8Kg" id="_jqdU8OisEei8Q_9yEvbE6g" version="Latest" type="property"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_mPePbOisEeiPGcU4H_o8Kg">
+      <baseItem xmi:id="_mPePbeisEeiPGcU4H_o8Kg" id="_jtIOceisEei8Q_9yEvbE6g" version="0.1" type="job"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_7kr30OabEeipONB1Z5jsPQ" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_7k1o0OabEeipONB1Z5jsPQ" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_7k1o0eabEeipONB1Z5jsPQ" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>

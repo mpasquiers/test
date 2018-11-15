@@ -41,6 +41,13 @@
     <module>jobs/process/oliv/test/demolog_0.1</module>
     <module>jobs/process/oliv/test/demoump_0.1</module>
     <module>jobs/process/oliv/test/test_routientemps_0.1</module>
+    <module>jobs/process/LDvGeEDICDE/ldvgeedicdej05texte3_0.1</module>
+    <module>jobs/process/LDvGeEDICDE/ldvgeedicdej05texte1_0.1</module>
+    <module>jobs/process/LDvGeEDICDE/ldvgeedicdej01ctrl_0.1</module>
+    <module>jobs/process/LDvGeEDICDE/ldvgeedicdej04_0.1</module>
+    <module>jobs/process/LDvGeEDICDE/ldvgeedicdej05texte2_0.1</module>
+    <module>jobs/process/LDvGeEDICDE/ldvgeedicdej03format_0.1</module>
+    <module>jobs/process/LDvGeEDICDE/ldvgeedicdej02dcod_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TEST</talend.project.name>

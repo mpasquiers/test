@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" xmi:version="2.0">
+  <context name="Default">
+    <contextParameter comment="" name="ExeFicOut" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodFormat&quot;"/>
+    <contextParameter comment="" name="ExeFicCtrl" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ01Ctrl&quot;"/>
+    <contextParameter comment="" name="ExeSqFicIn" prompt="" promptNeeded="false" type="id_String" value="&quot;mipp_ivt00021&quot;"/>
+    <contextParameter comment="" name="CnxPathTemp" prompt="" promptNeeded="false" type="id_String" value="&quot;D:\\Donnees\\ETL\\Tempdev&quot;"/>
+    <contextParameter comment="" name="CnxPathIn" prompt="" promptNeeded="false" type="id_String" value="&quot;D:\\Donnees\\ETL\\Indev&quot;"/>
+  </context>
+  <node componentName="tMap" componentVersion="2.1" posX="288" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="DCode"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="row2">
+      <column key="false" length="328" name="Param" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="MITI.IIF(MITI.equals((LCde.Param .substring(1 ,  3 )), &quot;ENT&quot;), MITI.IIF((MITI.equals((LCde.Param .substring(4 ,  3 )), &quot;C &quot;) || MITI.equals((LCde.Param .substring(4 ,  3 )), &quot;CEI&quot;) || MITI.equals((LCde.Param .substring(4 ,  3 )), &quot;CGR&quot;) || MITI.equals((LCde.Param .substring(4 ,  3 )), &quot;CEE&quot;)), &quot;1&quot;, &quot;0&quot;), Var.Fact)" name="Fact" type="id_String"/>
+      </varTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(Var.Fact, &quot;1&quot;)" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="LCde.Param" name="Param" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="LCde" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="Param" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="456" posY="216">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="Init"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="row3">
+      <column key="true" length="19" name="Cle" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="150" name="Data" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="MITI.IIF(MITI.equals(Var.Init, &quot;0&quot;), &quot;1&quot;, &quot; &quot;)" name="Init" type="id_String"/>
+      </varTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(Var.Init, &quot;1&quot;)" name="row3" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="&quot;*&quot;" name="Cle" type="id_String"/>
+        <mapperTableEntries expression="&quot;VIDE&quot;" name="Data" type="id_String"/>
+      </outputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileOutputPositional" componentVersion="2.1" posX="288" posY="432">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputPositional_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ01Ctrl_LEnr"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/&quot;  + context.ExeFicCtrl"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <metadata connector="FLOW" name="tFileOutputPositional_1">
+      <column key="false" length="328" name="Param" precision="0" sourceType="CHAR" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="2.1" posX="456" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodFormat_LInit"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;\\&quot;  + context.ExeFicOut"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_1">
+      <column key="true" length="19" name="Cle" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="150" name="Data" precision="0" sourceType="CHAR" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFileInputDelimited" componentVersion="2.1" posX="288" posY="120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="mipp_ivt00021_LCde"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathIn +  &quot;\\\\&quot;  + context.ExeSqFicIn"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_1">
+      <column key="false" length="328" name="Param" precision="0" sourceType="CHAR" type="id_String"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData"/>
+  </node>
+  <connection connectorName="FLOW" label="LCde" lineStyle="0" metaname="tFileInputDelimited_1" source="tFileInputDelimited_1" target="tMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="LEnr" source="tMap_1" target="tFileOutputPositional_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="LInit" source="tMap_2" target="tFileOutputDelimited_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+  </connection>
+  <note opaque="true" posX="608" posY="32" sizeHeight="193" sizeWidth="545" text="Init&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;DCode&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;">
+    <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
+    <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
+    <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="false"/>
+    <elementParameter field="RADIO" name="NOTETXT_TOP" value="true"/>
+  </note>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ebfac4b6-fbc1-4a4b-a2c0-ae5d007bbc63"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lUFbVlqsjG/UWpXjjCklmTCkQxm0QlNNCODucuDFifLkMpfgJOKbA5tjzHSp9j/omVsPEpDpk4y3
+dQxVtXZ4Gw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_09e12733-35c5-4f82-ac95-7cd74e8e822c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>z5FzTm7JVPwpHX2A03ZrZ3EoX75Q+cJgrHKNOS2mAzzpL7dz+q1ORnIv2v0e5TurYbBAGkbi0CeV
+8KKTwSz0Rw==</DigestValue></Reference></SignedInfo><SignatureValue>eRNZahIdovHK8Z0NFoxcSbYyOnthQI8TY11IHSuwgGqkRjxrvb/zSZSzk83NSz7TqZNPr6SdnCAx
+Ib3phn85JkXMB+zHYi7/tqXk+De79z+zSKYoJ3YqN7Mk3MFUxM3Q8hwybNaftrqgFi6Q5ufNbSgZ
+xH2tGWLztdo/kQUa3jv5oQDetzYwkr45Mh09cgfLCA4hwVnS/FqZ7JiMn8LjyBtAsqJYb4GIt4bQ
+6bLRVwgp37bQ3J6iJHSlfgd2O+5ltCPPjmxkLTUmR531sFAFL/37AazUIlRIVAL4c5Z6bzduhMZN
+rag10Rtm73wx1DCf1m3vVl83QJWTvsGL7OIsvw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_09e12733-35c5-4f82-ac95-7cd74e8e822c" Target="#_ebfac4b6-fbc1-4a4b-a2c0-ae5d007bbc63"><Timestamp>2018-11-15 08:01:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

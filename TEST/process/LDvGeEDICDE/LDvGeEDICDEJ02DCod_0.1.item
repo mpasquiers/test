@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" xmi:version="2.0">
+  <context name="Default">
+    <contextParameter comment="" name="ExeFicIn" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ01Ctrl&quot;"/>
+    <contextParameter comment="" name="ExeQt" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodMT&quot;"/>
+    <contextParameter comment="" name="CnxPathTemp" prompt="" promptNeeded="false" type="id_String" value="&quot;D:\\Donnees\\ETL\\Tempdev&quot;"/>
+    <contextParameter comment="" name="ExeHlig" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodLig&quot;"/>
+    <contextParameter comment="" name="ExeHent" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodEnt&quot;"/>
+    <contextParameter comment="" name="ExeOH" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodPostCde&quot;"/>
+    <contextParameter comment="" name="ExeQtSeq" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodMtSeq&quot;"/>
+  </context>
+  <node componentName="tMap" componentVersion="2.1" posX="312" posY="264">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="DCode"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="row4">
+      <column key="false" length="3" name="TypeEnr" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="3" name="Codeop" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="8" name="DatCrePieDiv" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="8" name="NumCdeDiv" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="15" name="NumCdeCli" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="8" name="DateCdeCli" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="8" name="DateLivSouh" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="8" name="DateDelaiDem" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="8" name="TiersDonOrdre" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="NumExtDO" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="38" name="NomCli" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="3" name="PayDO" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="8" name="TiersLivr" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="20" name="NumExtAdrLiv" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="38" name="NomAdrLiv" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="3" name="PayAdrLiv" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="20" name="NumFourDMC" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="38" name="RaiSocDMC" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="13" name="ValHTCde" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="4" name="Devise" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="40" name="Commentaire" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="4" name="ModeRegl" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="8" name="DateCreFic" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="FLOW" name="row5">
+      <column key="false" length="3" name="TypeEnr" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="8" name="NumCdeDiv" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="9" name="NumLigCdeDiv" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="35" name="ArtCli" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="Matnr" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="8" name="Dim" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="10" name="ParCombien" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="4" name="UniteCde" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="15" name="QteCde" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="PrixNetHT" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="13" name="Montant" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="4" name="Devise" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="15" name="NumLigCdeCli" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="20" name="NumCdeMag" precision="0" sourceType="" type="id_String"/>
+      <column key="true" length="20" name="NumMag" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="FLOW" name="row7">
+      <column key="false" length="35" name="NumCde" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="20" name="Matnr" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="8" name="Dim" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="12" name="Qt" precision="0" sourceType="" type="id_Float"/>
+      <column key="true" length="15" name="PrixNet" precision="4" sourceType="" type="id_Float"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(1 ,  3 ))" name="Segment" type="id_String"/>
+        <mapperTableEntries expression="MITI.IIF(MITI.equals(Var.Segment, &quot;LIG&quot;), (LCdeEdiClient.Param .substring(98 ,  12 )), Var.WQt)" name="WQt" type="id_String"/>
+        <mapperTableEntries expression="MITI.IIF(MITI.equals(Var.Segment, &quot;LIG&quot;), (LCdeEdiClient.Param .substring(110 ,  13 )), Var.WPrix)" name="WPrix" type="id_String"/>
+      </varTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(Var.Segment, &quot;ENT&quot;)" name="row4" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Var.Segment" name="TypeEnr" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(4 ,  3 ))" name="Codeop" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(13 ,  2 )) + (LCdeEdiClient.Param .substring(11 ,  2 )) + (LCdeEdiClient.Param .substring(7 ,  4 ))" name="DatCrePieDiv" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(15 ,  8 ))" name="NumCdeDiv" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(23 ,  15 ))" name="NumCdeCli" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(44 ,  2 )) + (LCdeEdiClient.Param .substring(42 ,  2 )) + (LCdeEdiClient.Param .substring(38 ,  4 ))" name="DateCdeCli" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(52 ,  2 )) + (LCdeEdiClient.Param .substring(50 ,  2 )) + (LCdeEdiClient.Param .substring(46 ,  4 ))" name="DateLivSouh" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(60 ,  2 )) + (LCdeEdiClient.Param .substring(58 ,  2 )) + (LCdeEdiClient.Param .substring(54 ,  4 ))" name="DateDelaiDem" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(62 ,  8 ))" name="TiersDonOrdre" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(70 ,  20 ))" name="NumExtDO" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(90 ,  38 ))" name="NomCli" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(128 ,  3 ))" name="PayDO" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(131 ,  8 ))" name="TiersLivr" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(139 ,  20 ))" name="NumExtAdrLiv" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(159 ,  38 ))" name="NomAdrLiv" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(197 ,  3 ))" name="PayAdrLiv" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(200 ,  20 ))" name="NumFourDMC" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(220 ,  38 ))" name="RaiSocDMC" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(258 ,  13 ))" name="ValHTCde" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(271 ,  4 ))" name="Devise" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(275 ,  40 ))" name="Commentaire" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(315 ,  4 ))" name="ModeRegl" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(325 ,  2 )) + (LCdeEdiClient.Param .substring(323 ,  2 )) + (LCdeEdiClient.Param .substring(319 ,  4 ))" name="DateCreFic" type="id_String"/>
+      </outputTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(Var.Segment, &quot;LIG&quot;)" name="row5" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Var.Segment" name="TypeEnr" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(4 ,  8 ))" name="NumCdeDiv" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(12 ,  9 ))" name="NumLigCdeDiv" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(21 ,  35 ))" name="ArtCli" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(56 ,  20 ))" name="Matnr" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(76 ,  8 ))" name="Dim" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(84 ,  10 ))" name="ParCombien" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(94 ,  4 ))" name="UniteCde" type="id_String"/>
+        <mapperTableEntries expression="Var.WQt" name="QteCde" type="id_String"/>
+        <mapperTableEntries expression="Var.WPrix" name="PrixNetHT" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(123 ,  13 ))" name="Montant" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(136 ,  4 ))" name="Devise" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(140 ,  15 ))" name="NumLigCdeCli" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(155 ,  20 ))" name="NumCdeMag" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(175 ,  20 ))" name="NumMag" type="id_String"/>
+      </outputTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="MITI.equals(Var.Segment, &quot;LIG&quot;)" name="row7" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(4 ,  8 ))" name="NumCde" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(56 ,  20 ))" name="Matnr" type="id_String"/>
+        <mapperTableEntries expression="(LCdeEdiClient.Param .substring(76 ,  8 ))" name="Dim" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.LEFT(Var.WQt ,  (&quot;,&quot; ).indexOf(Var.WQt ,  1 ) - 1 )" name="Qt" type="id_Float"/>
+        <mapperTableEntries expression="MITI.oconv(MITI.Iconv(Var.WPrix, &quot;MD0&quot;), &quot;MD4&quot;)" name="PrixNet" type="id_Float"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="LCdeEdiClient" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="Param" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileInputDelimited" componentVersion="2.1" posX="336" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ01Ctrl_LCdeEdiClient"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;\\\\&quot;  + context.ExeFicIn"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_1">
+      <column key="false" length="328" name="Param" precision="0" sourceType="CHAR" type="id_String"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData"/>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="2.1" posX="72" posY="408">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodEnt_LEnt"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;\\&quot;  + context.ExeHent"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_1">
+      <column key="false" length="3" name="TypeEnr" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="3" name="Codeop" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="8" name="DatCrePieDiv" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="8" name="NumCdeDiv" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="15" name="NumCdeCli" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="8" name="DateCdeCli" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="8" name="DateLivSouh" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="8" name="DateDelaiDem" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="8" name="TiersDonOrdre" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="20" name="NumExtDO" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="38" name="NomCli" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="3" name="PayDO" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="8" name="TiersLivr" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="20" name="NumExtAdrLiv" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="38" name="NomAdrLiv" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="3" name="PayAdrLiv" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="20" name="NumFourDMC" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="38" name="RaiSocDMC" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="13" name="ValHTCde" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="4" name="Devise" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="40" name="Commentaire" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="4" name="ModeRegl" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="8" name="DateCreFic" precision="0" sourceType="CHAR" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="2.1" posX="528" posY="432">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodLig_LLig"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;\\&quot;  + context.ExeHlig"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_2">
+      <column key="false" length="3" name="TypeEnr" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="8" name="NumCdeDiv" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="9" name="NumLigCdeDiv" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="35" name="ArtCli" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="20" name="Matnr" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="8" name="Dim" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="10" name="ParCombien" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="4" name="UniteCde" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="15" name="QteCde" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="13" name="PrixNetHT" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="13" name="Montant" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="4" name="Devise" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="15" name="NumLigCdeCli" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="20" name="NumCdeMag" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="true" length="20" name="NumMag" precision="0" sourceType="CHAR" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="2.1" posX="312" posY="816">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_3"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodMT_LApSum"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;\\&quot;  + context.ExeQt"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_3">
+      <column key="true" length="35" name="NumCde" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="15" name="Mt" precision="4" sourceType="NUMERIC" type="id_Float"/>
+    </metadata>
+  </node>
+  <node componentName="tFileInputPositional" componentVersion="2.1" posX="352" posY="625">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputPositional_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodMtSeq_LAvSum"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="#CnxPathTemp#/#ExeQtSeq#"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_jqdU8OisEei8Q_9yEvbE6g"/>
+    <elementParameter field="CLOSED_LIST" name="PATTERN_UNITS" value="SYMBOLS"/>
+    <metadata connector="FLOW" name="tFileInputPositional_1">
+      <column key="false" length="35" name="NumCde" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="15" name="Mt" precision="4" sourceType="NUMERIC" type="id_Float"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData"/>
+  </node>
+  <node componentName="tFileOutputPositional" componentVersion="2.1" posX="312" posY="600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputPositional_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodMtSeq_LMt"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/&quot;  + context.ExeQtSeq"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <metadata connector="FLOW" name="tFileOutputPositional_1">
+      <column key="false" length="35" name="NumCde" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="15" name="Mt" precision="4" sourceType="NUMERIC" type="id_Float"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputPositional" componentVersion="2.1" posX="312" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputPositional_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodPostCde_LPostCde"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/&quot;  + context.ExeOH"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <metadata connector="FLOW" name="tFileOutputPositional_2">
+      <column key="false" length="35" name="NumCde" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="20" name="Matnr" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="8" name="Dim" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="12" name="Qt" precision="0" sourceType="NUMERIC" type="id_Float"/>
+      <column key="true" length="15" name="PrixNet" precision="4" sourceType="NUMERIC" type="id_Float"/>
+    </metadata>
+  </node>
+  <node componentName="tFileInputPositional" componentVersion="2.1" posX="352" posY="409">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputPositional_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodPostCde_LPosteCde"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="#CnxPathTemp#/#ExeOH#"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_jqnF8eisEei8Q_9yEvbE6g"/>
+    <elementParameter field="CLOSED_LIST" name="PATTERN_UNITS" value="SYMBOLS"/>
+    <metadata connector="FLOW" name="tFileInputPositional_2">
+      <column key="false" length="35" name="NumCde" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="20" name="Matnr" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="8" name="Dim" precision="0" sourceType="CHAR" type="id_String"/>
+      <column key="false" length="12" name="Qt" precision="0" sourceType="NUMERIC" type="id_Float"/>
+      <column key="false" length="15" name="PrixNet" precision="4" sourceType="NUMERIC" type="id_Float"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData"/>
+  </node>
+  <node componentName="tAggregateRow" componentVersion="2.1" posX="312" posY="696">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="SumQt"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="INPUT_COLUMN" value="NumCde"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="NumCde"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="Mt"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Mt"/>
+    </elementParameter>
+    <metadata connector="FLOW" name="row1">
+      <column key="true" length="35" name="NumCde" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="15" name="Mt" precision="4" sourceType="" type="id_Float"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="LApSum" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="LAvSum.NumCde" name="NumCde" type="id_String"/>
+        <mapperTableEntries expression="DataStage.sum(LAvSum.Mt)" name="Mt" type="id_Float"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="LAvSum" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="Mt" type="id_Float"/>
+        <mapperTableEntries expression="" name="NumCde" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" posX="312" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="TRechCab"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="row6">
+      <column key="false" length="35" name="NumCde" precision="0" sourceType="" type="id_String"/>
+      <column key="false" length="15" name="Mt" precision="4" sourceType="" type="id_Float"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <varTables name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="LPosteCde.Qt &gt; 0" name="row6" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="LPosteCde.NumCde" name="NumCde" type="id_String"/>
+        <mapperTableEntries expression="LPosteCde.Qt * LPosteCde.PrixNet" name="Mt" type="id_Float"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="LPosteCde" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="Dim" type="id_String"/>
+        <mapperTableEntries expression="" name="Matnr" type="id_String"/>
+        <mapperTableEntries expression="" name="NumCde" type="id_String"/>
+        <mapperTableEntries expression="" name="PrixNet" type="id_Float"/>
+        <mapperTableEntries expression="" name="Qt" type="id_Float"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tAggregateRow_1" source="tAggregateRow_1" target="tFileOutputDelimited_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputPositional_1" source="tFileInputPositional_1" target="tAggregateRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="LCdeEdiClient" lineStyle="0" metaname="tFileInputDelimited_1" source="tFileInputDelimited_1" target="tMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="LEnt" source="tMap_1" target="tFileOutputDelimited_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="LLig" source="tMap_1" target="tFileOutputDelimited_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="LMt" source="tMap_2" target="tFileOutputPositional_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="LPostCde" source="tMap_1" target="tFileOutputPositional_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7"/>
+  </connection>
+  <connection connectorName="FLOW" label="LPosteCde" lineStyle="0" metaname="tFileInputPositional_2" source="tFileInputPositional_2" target="tMap_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8"/>
+  </connection>
+  <note opaque="true" posX="608" posY="32" sizeHeight="193" sizeWidth="545" text="DCode&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;TRechCab&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;">
+    <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
+    <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
+    <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="false"/>
+    <elementParameter field="RADIO" name="NOTETXT_TOP" value="true"/>
+  </note>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f3a4da03-58e0-4c5b-b2e7-2cefb0dbf854"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ndfugUUwu3uIuk6UNSTI8GVdKjbBnZsBk6joPlAAqBalo94ArQF+nDRokqgrG1WS6VeF5Kt4hXjb
++psxi9zy3g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1666ae17-e06d-4088-b94f-6f5bc103a105"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DUmbfIycbb5CaBkWGCgmYokfArq4VcOFVGdY7T5PIZcxgG27f5964/Wh68lF1vnGVthg6GnGPs2Y
+FwoqHweqjg==</DigestValue></Reference></SignedInfo><SignatureValue>ZzHDx+/NnFYzjils8HXJ4NZxLpU2QDEQIaqyCq11yeYWszVW643G93Y/WuByHdgOPe5psDwhq2Lh
+3D1mwsDQO9vH/oHjo9s8Rsdsk6Y4cB2G2W6Sxw9kzlTD6L1Iiom0FE6YvFXM/P2kkXUeh/xIMt86
+yTupQGA1hoy0d28a6si0lNw/lI00jDaOuWnMcCs4Ic5UR8cU41VpPHg5mzjOckHwfl69reVKAPC7
+lZXpNtvZwqGyO0OZAlL57nmhzGpm/Y6iOQ+jaI5vF+FFQu34iB+5Na0zX42sXRuVapPnvOgZetnX
+lu/jlajSpvZaQVR6zBfyl661ygL1He5z0RPw4Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1666ae17-e06d-4088-b94f-6f5bc103a105" Target="#_f3a4da03-58e0-4c5b-b2e7-2cefb0dbf854"><Timestamp>2018-11-15 08:01:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

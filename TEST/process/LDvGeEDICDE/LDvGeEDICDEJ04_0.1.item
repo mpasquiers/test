@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" xmi:version="2.0">
+  <context name="Default">
+    <contextParameter comment="" name="CnxPathTemp" prompt="" promptNeeded="false" type="id_String" value="&quot;D:\\Donnees\\ETL\\Tempdev&quot;"/>
+    <contextParameter comment="" name="ExeFicIn" prompt="" promptNeeded="false" type="id_String" value="&quot;LDvGeEDICDEJ02DCodFormatSeq&quot;"/>
+    <contextParameter comment="" name="CnxPathOut" prompt="" promptNeeded="false" type="id_String" value="&quot;D:\\Donnees\\ETL\\Outdev&quot;"/>
+    <contextParameter comment="" name="ExeFicOut" prompt="" promptNeeded="false" type="id_String" value="&quot;EDICDEEurodif.txt&quot;"/>
+  </context>
+  <node componentName="tMap" componentVersion="2.1" posX="240" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="Copie"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <metadata connector="FLOW" name="row1">
+      <column key="false" length="150" name="Data" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <outputTables name="row1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="StringHandling.TRIM(LAvCopie.Data )" name="Data" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="LAvCopie" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="Data" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="2.1" posX="240" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="EDICDEEurodif_LApCopie"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathOut +  &quot;/&quot;  + context.ExeFicOut"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_1">
+      <column key="false" length="150" name="Data" precision="0" sourceType="CHAR" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFileInputDelimited" componentVersion="2.1" posX="240" posY="120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="LDvGeEDICDEJ02DCodFormatSeq_LAvCopie"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CnxPathTemp +  &quot;/&quot;  + context.ExeFicIn"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_1">
+      <column key="false" length="150" name="Data" precision="0" sourceType="CHAR" type="id_String"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData"/>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="LApCopie" source="tMap_1" target="tFileOutputDelimited_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="LAvCopie" lineStyle="0" metaname="tFileInputDelimited_1" source="tFileInputDelimited_1" target="tMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+  </connection>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b29809fc-7fc5-4f0a-9b85-2f95e49ee44f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>py11RvgebDsrNl8WEGKAWA56TqW4DMQg9uyaAn1KvW4KYng4k3O5w91cODP2+hHgKVXs2slxCUpr
+TQT3CqohuQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f4e619b4-c7a1-48a2-a6d7-e1b82bc17735"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MnSsXWupX6pgSS6oNwWDvRm7+R5zpP2RNTke85zjAOPO95R9ESmbE+jwO6ZllxpW7eKStpFx1snR
+ZKox02yHkQ==</DigestValue></Reference></SignedInfo><SignatureValue>VU6NmxlivI/qgCmV84pWIwObd0G5jXdL0YgBZOmXoVVSz7H6uQDSGUhKLByvQXrtQvSIGC3TYxiY
+dPv5Y7Hc0JMxK3xDAkmMz+Ow76ELvYFh9mq+7N70VbeSf2Jkf+Z14HCizDIcpnDzShzcmK/4GjGw
+Nz6IzgqnD/NTRqtZk8NF3upf7Yi3p5vhr03gHcRtSX5wLJzucZ8byVFflwkPCoOLv0cYLZxOfiOw
+BcrZxqcsrceQJHBHK2To1AmCOBxWZE2F0wiD/qR7odJJddZtLo3UbFvSUpxCTtNmP1tqfxXLuOyo
+BgUXPm4ruTTPuYeQuNH/1l05aOQH1ti8/tILlg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f4e619b4-c7a1-48a2-a6d7-e1b82bc17735" Target="#_b29809fc-7fc5-4f0a-9b85-2f95e49ee44f"><Timestamp>2018-11-15 08:01:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
