@@ -51,6 +51,7 @@
     <module>jobs/process/oliv/test/testsubstring_0.1</module>
     <module>jobs/process/oliv/test/testfunctiondmc_0.1</module>
     <module>jobs/process/LDvGeEDICDE/ldvgeedicdes01_0.1</module>
+    <module>jobs/process/LDvGeEDICDE/etienne_ldvgeedicdej02dcod_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TEST</talend.project.name>
