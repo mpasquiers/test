@@ -449,10 +449,11 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="DMCUtils.formatStringWithDecimal(LMt.Mt,4).replace('.', ',') " name="var1" type="id_String"/>
         <mapperTableEntries expression="LCde.NumCdeDiv + &quot; &quot; + &quot;E1&quot;" name="wcle1" type="id_String"/>
-        <mapperTableEntries expression="&quot;SEG_ENTETE&quot; + &quot;|&quot; + StringHandling.TRIM(LCde.NumCdeDiv ) + &quot;|&quot; + LCde.DatCrePieDiv + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + StringHandling.TRIM(LCde.NumFourDMC ) + &quot;|&quot; + StringHandling.TRIM(LCde.RaiSocDMC ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;FR&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + StringHandling.TRIM(LCde.NumCdeCli ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + StringHandling.TRIM(MITI.convert(&quot;.&quot;, &quot;,&quot;, MITI.Fmt(LMt.Mt, 4)) ) + &quot;|&quot; + StringHandling.TRIM(LCde.Devise ) + &quot;|&quot; + &quot;FIN_SEG_ENTETE&quot;" name="wdata1" type="id_String"/>
+        <mapperTableEntries expression="&quot;SEG_ENTETE&quot; + &quot;|&quot; + StringHandling.TRIM(LCde.NumCdeDiv ) + &quot;|&quot; + LCde.DatCrePieDiv + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + StringHandling.TRIM(LCde.NumFourDMC ) + &quot;|&quot; + StringHandling.TRIM(LCde.RaiSocDMC ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;FR&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + StringHandling.TRIM(LCde.NumCdeCli ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + Var.var1 + &quot;|&quot; + StringHandling.TRIM(LCde.Devise ) + &quot;|&quot; + &quot;FIN_SEG_ENTETE&quot; " name="wdata1" type="id_String"/>
         <mapperTableEntries expression="LCde.NumCdeDiv + &quot; &quot; + &quot;E2&quot;" name="wcle2" type="id_String"/>
-        <mapperTableEntries expression="&quot;SEG_DEST&quot; + &quot;|&quot; + StringHandling.TRIM(LCde.NumCdeDiv ) + &quot;|&quot; + StringHandling.TRIM(LCde.NumExtAdrLiv ) + &quot;|&quot; + &quot;M&quot; + &quot;|&quot; + StringHandling.TRIM(LCde.NomAdrLiv ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + LCde.PayAdrLiv + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + LCde.DateDelaiDem + &quot;|&quot; + &quot;FIN_SEG_DEST&quot;" name="wdata2" type="id_String"/>
+        <mapperTableEntries expression="&quot;SEG_DEST&quot; + &quot;|&quot; + StringHandling.TRIM(LCde.NumCdeDiv ) + &quot;|&quot; + StringHandling.TRIM(LCde.NumExtAdrLiv ) + &quot;|&quot; + &quot;M&quot; + &quot;|&quot; + StringHandling.TRIM(LCde.NomAdrLiv ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + LCde.PayAdrLiv + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + LCde.DateDelaiDem + &quot;|&quot; + &quot;FIN_SEG_DEST&quot; " name="wdata2" type="id_String"/>
       </varTables>
       <outputTables columnNameFilter="" name="row5" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="LCde.NomAdrLiv" name="NomAdrLiv" type="id_String"/>
@@ -823,7 +824,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="(Llignes.QteCde .substring(1 ,  8 ))" name="wqte" type="id_String"/>
-        <mapperTableEntries expression="&quot;&quot;.equals(Trim(Llignes.Dim)) ? Llignes.Matnr : Trim(Llignes.Matnr) : '*': Trim(Llignes.Dim) " name="wrefFNR" type="id_String"/>
+        <mapperTableEntries expression="&quot;&quot;.equals(Llignes.Dim.trim()) ? Llignes.Matnr : Llignes.Matnr.trim() + '*'+ Llignes.Dim.trim() " name="wrefFNR" type="id_String"/>
         <mapperTableEntries expression="Llignes.NumCdeDiv + Llignes.NumLigCdeDiv + &quot;L1&quot;" name="wcle" type="id_String"/>
         <mapperTableEntries expression="&quot;SEG_DETAIL_COLIS&quot; + &quot;|&quot; + StringHandling.TRIM(Llignes.NumCdeDiv ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + StringHandling.TRIM(Llignes.ArtCli ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + StringHandling.TRIM(wqte ) + &quot;|&quot; + StringHandling.TRIM(Llignes.PrixNetHT ) + &quot;|&quot; + StringHandling.TRIM(wrefFNR ) + &quot;|&quot; + &quot;&quot; + &quot;|&quot; + &quot;FIN_SEG_DETAIL_COLIS&quot;" name="wdata" type="id_String"/>
       </varTables>
@@ -831,7 +832,7 @@
         <mapperTableEntries expression="Var.wcle" name="Cle" type="id_String"/>
         <mapperTableEntries expression="Var.wdata" name="Data" type="id_String"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" minimized="true" name="Llignes" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="Llignes" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="" name="TypeEnr" type="id_String"/>
         <mapperTableEntries expression="" name="NumCdeDiv" type="id_String"/>
         <mapperTableEntries expression="" name="NumLigCdeDiv" type="id_String"/>
@@ -928,13 +929,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_472c8f35-f100-49ae-bae7-2bae3748990a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>w4/WAt7sqCHMSmzlLvxeMfuTd1d9fCNrn+GFqg/ZpET8V8nWfL4JgXm/yjFMHIOZIhmkxZv1cpn0
-5rfRe8BV7g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0d25645e-9a15-4a2f-bec8-1770c8590ad4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZVKNSAI+QHYWUHf0tm9yFWUa2CD2iMpajtmpYZVsLBGotReJZzZGzqNL4rxVVB4RFBKCB1OJB+HE
-nMxR/+rXBg==</DigestValue></Reference></SignedInfo><SignatureValue>ByKLh2FJUubj2CRSL6X5EX7qN01w3lX/jH2fckX1trlcxAfnmfBOMOBldn5kDqJ0J2+zsDD7Xee/
-3jStVnJLurmjm1pfRpnVhgplDj0PERLzmLeWVJV0OMdXRED3FVjGJ5A+pZsoeN9aHs5pGeY6OLMD
-AQcEJu1UI6D+GgdrIlLTkUwx8PVHZ5HSPjRLLomQja0gQXZ39BMb2+z6FNNmv68KGZ3g4my+JChj
-wUu2aXfRBUFclSpl97v4fscqh1whT7k+f96eagBV2BUoJhlOuw57ZVXsJqeRZb9es0S3OS+SuxI/
-Hu+q61A02r33kfMcRXSv28Vx7KFgUj88AHUCIg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_da7f0691-03d3-4935-a89f-d9889a8c1894"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TdrAOzCs3Q+T/+dcyEDPWJzj5I9byhJMeHxgIwEXBT55/aONXiJWgPr70fjNOaDQDFJS12r7DBnA
+CXWVEuFE5g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6a247225-f113-4164-8c12-4526f5144ca1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qNHGQL4ZfeByw0E9J+9CnPobZmw/p2H14xF8EHHZWs0P5nVCekmrPEE0d/v7mW/XqDFRvWH7k5Eg
+44JVqDUZoQ==</DigestValue></Reference></SignedInfo><SignatureValue>G6noM5MlrtTwqBOE4Ey7Z7qc33odPL6pRTfgQ+kEk2J2r59Eb6fRqn6Q66J2WiUs+i+LfrVZ8gw/
+lk2uoCK4uxu11WcSIgvxLQSaynemg801h3Lx7AJwf0fLkW1P8AEW0CFmHDQrdLy/dReJUjY0u5VL
+P5Mr+HTrKx7M5XKDeXYaRK21xujZq8gecwXemsjSq6TgP3Bt6vwOwIX2Qs6FY9vtDl4Rb/TXgJ0a
+zuatFLw1UJOofD9PM0c3DDuqs84reRilYyzbIGuysOLBh2l+2dtyZ4M2ecK6pCBO40Q08v1M9NiL
+b+3eCySJ0gDvlt4OGiAZCEEAdWyqJFg9gdQEoQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -958,4 +959,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0d25645e-9a15-4a2f-bec8-1770c8590ad4" Target="#_472c8f35-f100-49ae-bae7-2bae3748990a"><Timestamp>2018-11-15 12:00:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6a247225-f113-4164-8c12-4526f5144ca1" Target="#_da7f0691-03d3-4935-a89f-d9889a8c1894"><Timestamp>2018-11-15 14:06:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
