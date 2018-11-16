@@ -147,7 +147,7 @@ public class DMCUtils {
 	        System.out.println(" lnewString = " + lnewString);
 	        
 	        lnewString.replace(",", ".");
-
+	        System.out.println(" lnewString = " + lnewString);
 	        return lnewString;
 	 
 	    }	   
