@@ -144,7 +144,7 @@ public class DMCUtils {
 	              buffer.append(letter);
 	          }	        
 	        lnewString = asZone + buffer.toString();
-	        ystem.out.println(" lnewString = " + lnewString);
+	        System.out.println(" lnewString = " + lnewString);
 	        
 	        lnewString.replace(",", ".");
 
