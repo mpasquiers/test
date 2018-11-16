@@ -146,7 +146,7 @@ public class DMCUtils {
 	        lnewString = asZone + buffer.toString();
 	        System.out.println(" lnewString = " + lnewString);
 	        
-	        lnewString.replaceAll(",", ".");
+	        lnewString=lnewString.replaceAll(",", ".");
 	        System.out.println(" lnewString = " + lnewString);
 	        return lnewString;
 	 
