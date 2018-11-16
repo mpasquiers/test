@@ -117,7 +117,7 @@ public class DMCUtils {
 	     * {example} formatNombreAvecDecimal("123.1", 4)   
 	     *           retourne 123.1000
 	     */ 	   
-	   public static String formatStringWithDecimal(String asZone, int asNbrDecimale) { 
+	   public static String formatStringWithDecimal(String asZone, int asNbrDecimale, String asSeparateur) { 
            String lnewString = new String();
 	       String letter = new String("0");
 	       String var_Zone = asZone;
@@ -125,7 +125,10 @@ public class DMCUtils {
 		   int var_nbr_decimal;
 		   int lSize;
 		   
-	        var_position = asZone.indexOf( '.' ) + 1 ;
+		   /* determine la position du premier caracteère après le séparateur */
+	        var_position = asZone.indexOf( asSeparateur ) + 1 ;
+	        
+	      /* Si pas de décimale on ajoute en fin de la zone le point décimal */
 	        if (var_position == 0 ){
 	        	var_Zone = var_Zone + '.';
 	        	var_nbr_decimal = 0;
@@ -140,6 +143,7 @@ public class DMCUtils {
 	              buffer.append(letter);
 	          }	        
 	        lnewString = var_Zone.trim() + buffer.toString();
+	        lnewString.replace(",", ".");
 	        return lnewString;
 	 
 	    }	   
