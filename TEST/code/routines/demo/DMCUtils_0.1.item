@@ -127,6 +127,7 @@ public class DMCUtils {
 		   
 		   /* determine la position du premier caracteère après le séparateur */
 	        var_position = asZone.indexOf( asSeparateur ) + 1 ;
+	        System.out.println(" position = " + var_position);
 	        
 	      /* Si pas de décimale on ajoute en fin de la zone le point décimal */
 	        if (var_position == 0 ){
