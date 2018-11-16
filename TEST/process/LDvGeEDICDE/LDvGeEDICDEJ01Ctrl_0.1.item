@@ -10,7 +10,7 @@
     <contextParameter comment="" name="SmtpServeur" prompt="SmtpServeur?" promptNeeded="false" repositoryContextId="_z-UigGibEeiOqsLvjspbzQ" type="id_String" value="&quot;zimbra.newel.net&quot;"/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="1985"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
@@ -114,7 +114,7 @@
     <routinesParameter id="_7sRtluabEeipONB1Z5jsPQ" name="TalendString"/>
     <routinesParameter id="_hcrO0OfoEei1bOo2uAs1XA" name="DMCUtils"/>
   </parameters>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-1216" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="context.CnxPathIn +  &quot;/mipp_ivt00021&quot;"/>
@@ -164,7 +164,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-1088" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -185,7 +185,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="&quot;ENT&quot;.equals(LCde.Param .substring(0,3)) ? &#13;&#10;&quot;C  &quot;.equals(LCde.Param .substring(3,6)) || &quot;CEI&quot;.equals(LCde.Param .substring(3,6)) || &quot;CGR&quot;.equals(LCde.Param .substring(3,6))  ||  &quot;CEE&quot;.equals(LCde.Param .substring(3,6)) ? true : false&#13;&#10;: false " name="Fact" type="id_Boolean"/>
+        <mapperTableEntries expression="&quot;ENT&quot;.equals(LCde.Param .substring(0,3)) ? &#13;&#10;&quot;C  &quot;.equals(LCde.Param .substring(3,6)) || &quot;CEI&quot;.equals(LCde.Param .substring(3,6)) || &quot;CGR&quot;.equals(LCde.Param .substring(3,6))  ||  &quot;CEE&quot;.equals(LCde.Param .substring(3,6)) ? true : false&#13;&#10;: Var.Fact " name="Fact" type="id_Boolean"/>
       </varTables>
       <outputTables activateExpressionFilter="true" expressionFilter="Var.Fact " name="row2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="LCde.Param" name="Param" type="id_String"/>
@@ -195,7 +195,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFileOutputPositional" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="64">
+  <node componentName="tFileOutputPositional" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-896" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputPositional_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
@@ -230,7 +230,7 @@
       <column key="false" length="328" name="Param" nullable="false" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="gestionLog" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="96" posY="352">
+  <node componentName="gestionLog" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="-1248" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="gestionLog_1"/>
     <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
@@ -244,7 +244,7 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-1248" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
@@ -266,7 +266,7 @@
       <column key="false" length="150" name="Data" nullable="false" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-992" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
@@ -314,12 +314,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
-  <note opaque="true" posX="608" posY="32" sizeHeight="193" sizeWidth="545" text="Init&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;DCode&#13;&#10;&#9;Original stage had Abort constraint which is not exported&#13;&#10;">
-    <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
-    <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
-    <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="false"/>
-    <elementParameter field="RADIO" name="NOTETXT_TOP" value="true"/>
-  </note>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
@@ -335,13 +329,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c756abc2-0580-4cd0-954e-93039d6b39a4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2EMBAt5VvRWHQzLaIIs/CzLVQ/lznf2f898m0EcmLTFZUJKm4tlUfk2KQKLfUf7lv2j3jxa7GQjo
-cIIoqOBr8g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2cdd287e-4abe-4362-91c8-306f5b254a33"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>V9CqghwxmVptBkDO1lRbmRDeFJ+c+LfVon3iAAKHhFQzeWzBWyrn4L4tlsvVoXtCm+k7Kdau0Ik6
-t1kAHHSOXA==</DigestValue></Reference></SignedInfo><SignatureValue>Q0jeiGCvXt2RzcBmBc2q0enjbfdniC59BejIcmyjDYugx2YILAGobNWuJ2+UiXJkJJjnUlxFsemG
-XLrWCciuT6g/AUAMOmgEhEFElEs0TepMOTVQbtWlKO2cVERVjYPCMNHrxsOePet9WXzhiIJih5Ok
-bf8I6WFPjilWWlqhz3+rnzOkquHJRa/oXh7gOW/AS0LTSiTpAZOCbRyjzMFOepRBZxrc5vOxwDo+
-JjL1LGRjXsILHZp6ElKjrySRE6EoYm8Lh0FVv4keJfZXyKw+AyuiPAmfj0vEt66phQp3XBvt13Kr
-NiDhei+IVL/Ib2XDaLlTm7K17VzTMB3ZYvfAmw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_934b650e-d974-4f49-bb8a-a1b8b0f499fb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>W0gHvUWKZuNGmN9RlKw7MI89qTBWGeEBWdSmvV7TCvdG0hAw8n5uAxk7dNds3GmFZVgo0UoE9xDx
+csSRPlF6/Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8225feab-18d3-4e0e-a908-97e34619f68b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Te6OgHHm6FarZ0FlXCrYLGHfvqFaVKTxuSg5mfpYcZjW7uXB93GRoiytJNlD0kHaIKxovXYeEH+M
+cUQcVehUEQ==</DigestValue></Reference></SignedInfo><SignatureValue>lMkUv6KxHGMp1QCJZzqWRrQkRJmE1mWcGUIg5lmAo3yn2lydiSUsMbuGDhvw+emsXzCaRjV3TUlM
+ovF5k0AxBWn+9rlcU4zAvIa4FfGDatHqUybmtG9oORqkZHRDKUDeQXOJaxMgH/zZOyi5wJIFyLms
+qS2XNy5CffdmSrTLvO8e+fk/sfm7AFgXzcv51MaWexz61lHu7b6LhgqTUgF2NI/QSauDBOS15gdn
+NKjnsM4o3My6yO8xN4CKAzup4pT63k+w/iS0D8p2EFV/bIopYL5MBiIP+tuVThewL1ol+7Su8gjf
+eajR1XeV2YZ8EW+U8Fp61sDb+LZgjDVp/sJIWQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -365,4 +359,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2cdd287e-4abe-4362-91c8-306f5b254a33" Target="#_c756abc2-0580-4cd0-954e-93039d6b39a4"><Timestamp>2018-11-15 14:59:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8225feab-18d3-4e0e-a908-97e34619f68b" Target="#_934b650e-d974-4f49-bb8a-a1b8b0f499fb"><Timestamp>2018-11-16 07:35:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
